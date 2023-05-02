@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : hj.jo@dkbmc.com
+ * @group             : 
+ * @last modified on  : 05-02-2023
+ * @last modified by  : hj.jo@dkbmc.com
+**/
 @isTest
 public class BatchManager_Test {
     @TestSetup
@@ -5,7 +12,6 @@ public class BatchManager_Test {
         Account account = new Account(
             Name = 'TEST'
         );
-
         Insert account;
 
         BatchManager__c batchManager = new BatchManager__c(
