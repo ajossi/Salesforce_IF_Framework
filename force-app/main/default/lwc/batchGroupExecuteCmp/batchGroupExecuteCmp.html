@@ -1,0 +1,60 @@
+<template>
+    <lightning-layout style="padding-bottom: 10px;">
+        <lightning-layout-item size="12" >
+            <div class="slds-tabs_card" style="min-height: 300px; margin-top: 10px;">
+                <template if:true={loaded}>
+                    <lightning-layout style="height: 100%;" class="top_area">
+                        <lightning-layout-item class="layout-item combobox_area" size="6">
+                            <div class="layout-item-combo" style="display: inline-block; min-width: 50%;">
+                                <lightning-combobox
+                                    style="min-width: 35%;"
+                                    name="group"
+                                    label="Batch Group"
+                                    value={groupValue}
+                                    placeholder="Select Batch Group"
+                                    options={groupOptions}
+                                    onchange={groupChange}>
+                                </lightning-combobox>
+                                <lightning-combobox
+                                    style="min-width: 35%;"
+                                    name="batch"
+                                    label="Batch"
+                                    value={sequenceValue}
+                                    placeholder="Select Batch"
+                                    options={sequenceOptions}
+                                    onchange={sequenceChange}>
+                                </lightning-combobox>
+                                <lightning-textarea 
+                                    style="min-width: 35%; height: 30%;"
+                                    name="executeCode" 
+                                    label="Execute Code"
+                                    value={executeCode}
+                                    onchange={changeExecuteCode}
+                                    data-recid="executeCode"
+                                    >
+                                </lightning-textarea>
+                            </div>
+                            <div style="display: inline-block;">
+                                <lightning-button 
+                                    variant="Brand" 
+                                    label="Execute" 
+                                    onclick={handleExecute} 
+                                    class="slds-m-left_x-small"
+                              ></lightning-button>
+                              <!-- <lightning-input 
+                                    style="display: inline-block; margin-left: 10px;"
+                                    type="checkbox" 
+                                    label="Chain" 
+                                    name="chain"
+                                    onchange={handleCheckboxChange}
+                                    checked={checkboxValue}
+                                    >
+                                </lightning-input> -->
+                              </div>
+                         </lightning-layout-item>
+                      </lightning-layout>
+                </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

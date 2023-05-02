@@ -1,0 +1,1484 @@
+[
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YSEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Account 채권 정보 조회",
+    "DispatcherClass__c": "IF_DebentureSearchable",
+    "InterfaceId__c": "IF_SA_SF_0072",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "IF_Debenture",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0072",
+    "ExampleParam__c": "1/1056453/202207",
+    "ServiceName__c": "debentureSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YTEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "IF_SA_SF_0074 / Account 연체 정보",
+    "DispatcherClass__c": "IF_OverdueSearchable",
+    "InterfaceId__c": "IF_SA_SF_0074",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "IF_Overdue",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0074",
+    "ExampleParam__c": "1069125",
+    "ServiceName__c": "overdueSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YVEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "MDM Account 배치 수신 I/F",
+    "DispatcherClass__c": "IF_MDMAccountReceptive",
+    "InterfaceId__c": "IF_MD_SF_0003",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "MDMAccount__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/rest/md/sf-0003",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YWEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "실시간 내수 배송정보(TMS)",
+    "DispatcherClass__c": "IF_TransportDocSearchable",
+    "InterfaceId__c": "IF_TM_SF_0021",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "IF_TransportDoc__c",
+    "TargetSystem__c": "a0W0w0000051TGsEAM",
+    "UriAddress__c": "/api/jdbc/tm/sf-0021",
+    "ExampleParam__c": "6477789",
+    "ServiceName__c": "transportDocSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YXEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "무상 주문 정보 실시간 조회 I/F",
+    "DispatcherClass__c": "IF_SampleSearchable",
+    "InterfaceId__c": "IF_SA_SF_0032",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0032",
+    "ExampleParam__c": null,
+    "ServiceName__c": "sampleSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YYEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": false,
+    "Description__c": "Account 담보 배치 수신 I/F",
+    "DispatcherClass__c": "IF_CollateralReceptive",
+    "InterfaceId__c": "IF_SA_SF_0075",
+    "MapperClass__c": "collateralReceive",
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Collateral__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sap/sf-0075",
+    "ExampleParam__c": null,
+    "ServiceName__c": "collateralReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YZEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "SAP 수출 주문 정보 수신 I/F",
+    "DispatcherClass__c": "IF_ExportOrderReceptive",
+    "InterfaceId__c": "IF_SA_SF_0085",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Order__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0085",
+    "ExampleParam__c": null,
+    "ServiceName__c": "exportOrderReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YaEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "SAP 내수 주문 정보 수신 I/F",
+    "DispatcherClass__c": "IF_DomesticDeliveryReceptive",
+    "InterfaceId__c": "IF_SA_SF_0020",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Delivery,IF_DeliveryItem",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0020",
+    "ExampleParam__c": null,
+    "ServiceName__c": "domesticDeliveryReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YbEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Account 담보 정보 실시간 조회",
+    "DispatcherClass__c": "IF_CollateralSearchable",
+    "InterfaceId__c": "IF_SA_SF_0092",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "IF_Collateral",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0092",
+    "ExampleParam__c": "1059228",
+    "ServiceName__c": "collateralSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YcEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Master B/L 정보(선박 화물 추적 등록을 위한 요청)",
+    "DispatcherClass__c": "IF_TrackingSendable",
+    "InterfaceId__c": "IF_SF_TD_0025",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGpEAM",
+    "UriAddress__c": "/partners/track/v2/cargo-tracks/tracking",
+    "ExampleParam__c": "[{\n         \"bl_no\": \"ONEYSELC94906600\",    \n         \"cust_order_id\": \"NSS001\",      \n         \"line_cd\": \"ONE\"          \n}]",
+    "ServiceName__c": "trackingSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YdEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_PromotionPlanSendable",
+    "InterfaceId__c": "IF_SF_SC_0064",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "legacy DWRS",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sf/sc-0064",
+    "ExampleParam__c": null,
+    "ServiceName__c": "sendPromotionPlan",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YeEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Account 여신 배치 수신 I/F",
+    "DispatcherClass__c": "IF_LoanReceptive",
+    "InterfaceId__c": "IF_BI_SF_0093",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Loan__c",
+    "TargetSystem__c": "a0W0w0000051TGuEAM",
+    "UriAddress__c": "/api/rest/bi/sf-0093",
+    "ExampleParam__c": "{\n\"request\" : [{\n \"mdmCode\" : \"mdmCode\"\n,\"mdmName\" : \"mdmName\"\n,\"salesEmployee\" : \"salesEmployee\"\n,\"salesEmployeeName\" : \"salesEmployeeName\"\n,\"creditBalance\" : \"creditBalance\"\n,\"creditTotal\" : \"creditTotal\"\n,\"currency_x\" : \"currency_x\"\n,\"branchTeamCode\" : \"branchTeamCode\"\n,\"account\" : \"account\"\n,\"branchTeamName\" : \"branchTeamName\"\n}]\n}",
+    "ServiceName__c": "loanReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YfEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "2차상 계약고객 마스터 수신 I/F",
+    "DispatcherClass__c": "IF_PartnerAccountReceptive",
+    "InterfaceId__c": "IF_BI_SF_0089",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_PartnerAccount__c",
+    "TargetSystem__c": "a0W0w0000051TGuEAM",
+    "UriAddress__c": "/api/rest/bi/sf-0089",
+    "ExampleParam__c": "{\n\"request\" : [{\n\"sapTwinsCode\" : \"sapTwinsCode\"\n,\"mdmCode\" : \"mdmCode\"\n,\"twinsCode\" : \"twinsCode\"\n,\"twinsName\" : \"twinsName\"\n,\"address\" : \"address\"\n,\"addressDetail\" : \"addressDetail\"\n,\"customerType\" : \"customerType\"\n,\"customerDetailType\" : \"customerDetailType\"\n,\"zipCode\" : \"zipCode\"\n,\"representName\" : \"representName\"\n,\"status\" : \"status\"\n,\"twinsCreateDate\" : \"twinsCreateDate\"\n,\"posNum\" : \"posNum\"\n,\"tempTotalCnt\" : \"tempTotalCnt\"\n,\"totalFreshCnt\" : \"totalFreshCnt\"\n}]\n}",
+    "ServiceName__c": "partnerAccountRecp",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y3EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_KeyAccountSendable",
+    "InterfaceId__c": "IF_SF_SC_0094",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "legacy DWRS",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sf/sc-0094",
+    "ExampleParam__c": "{\n    [\n        {\"id\" : \"PromotionPushAccount__c.id\"}, ...\n    ]\n}",
+    "ServiceName__c": "sendKeyAccount",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y4EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "MDM Product 배치 수신 I/F",
+    "DispatcherClass__c": "IF_ProductReceptive",
+    "InterfaceId__c": "IF_MD_SF_0002",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "MDMProductMaster__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/rest/md/sf-0002",
+    "ExampleParam__c": null,
+    "ServiceName__c": "productReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y5EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_RestTest",
+    "InterfaceId__c": "IF_SF_TEST_0001",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "Account",
+    "TargetSystem__c": "a0W0w0000051TGiEAM",
+    "UriAddress__c": "/api/test/ver_1.0/RestTest",
+    "ExampleParam__c": null,
+    "ServiceName__c": "restTest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y6EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "rest 호출 테스트용 레코드",
+    "DispatcherClass__c": "IF_CalloutTest",
+    "InterfaceId__c": "IF_TEST_SF_0002",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGiEAM",
+    "UriAddress__c": "/api/rest/product",
+    "ExampleParam__c": null,
+    "ServiceName__c": "calloutTest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y7EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "SAP 수출 배송 정보 수신 I/F",
+    "DispatcherClass__c": "IF_ExportDeliveryReceptive",
+    "InterfaceId__c": "IF_SA_SF_0086",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Delivery__c, IF_DeliveryItem__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0086",
+    "ExampleParam__c": null,
+    "ServiceName__c": "exportDeliveryReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y8EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "TEST",
+    "DispatcherClass__c": "IF_LoanSearchable",
+    "InterfaceId__c": "IF_TEST_SF",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGkEAM",
+    "UriAddress__c": "/api/rfc/sap/sf-0073",
+    "ExampleParam__c": null,
+    "ServiceName__c": "TEST",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272Y9EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_CreateAnimals",
+    "InterfaceId__c": "IF_SF_TEST_0004",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGiEAM",
+    "UriAddress__c": "/api/rest/agency",
+    "ExampleParam__c": null,
+    "ServiceName__c": "herokuTest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YAEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_DomesticOrderReceptive",
+    "InterfaceId__c": "IF_SA_SF_0019",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Order__c,IF_OrderItem__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0019",
+    "ExampleParam__c": null,
+    "ServiceName__c": "domesticOrderReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YBEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "TrailHead  Apex Rest Callout 테스트용 Route",
+    "DispatcherClass__c": "IF_CreateAnimals",
+    "InterfaceId__c": "IF_SF_TEST_0003",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGqEAM",
+    "UriAddress__c": "/animals",
+    "ExampleParam__c": null,
+    "ServiceName__c": "createAnimals",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YCEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "조직정보 수신 I/F",
+    "DispatcherClass__c": "IF_DepartmentReceptive",
+    "InterfaceId__c": "IF_HR_SF_0060",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Department__c",
+    "TargetSystem__c": "a0W0w0000051TGoEAM",
+    "UriAddress__c": "/api/rest/hr/sf-0060",
+    "ExampleParam__c": "{\n\"request\" : [{\n     \"COMPANYCODE\" : \"COMPANYCODE\"\n    ,\"NAME_1\" : \"NAME_1\"\n    ,\"NAME_2\" : \"NAME_2\"\n    ,\"NAME_3\" : \"NAME_3\"\n    ,\"NAME_4\" : \"NAME_4\"\n    ,\"NAME_5\" : \"NAME_5\"\n    ,\"NAME_6\" : \"NAME_6\"\n    ,\"MYCODE\" : \"MYCODE\"\n    ,\"DEPTCODE\" : \"DEPTCODE\"\n    ,\"SHORTNAME\" : \"SHORTNAME\"\n    ,\"PARENTCODE\" : \"PARENTCODE\"\n}]\n}",
+    "ServiceName__c": "departmentReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YDEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "임직원정보 수신 I/F",
+    "DispatcherClass__c": "IF_EmployeeReceptive",
+    "InterfaceId__c": "IF_HR_SF_0059",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Employee__c",
+    "TargetSystem__c": "a0W0w0000051TGoEAM",
+    "UriAddress__c": "/api/rest/hr/sf-0059",
+    "ExampleParam__c": "{\n\"request\" : [{\n     \"ORGNUMBER\" : \"ORGNUMBER\"\n    ,\"NAME\" : \"NAME\"\n    ,\"DEPTCODE1\" : \"DEPTCODE1\"\n    ,\"GRADE1\" : \"GRADE1\"\n    ,\"GRADECODE1\" : \"GRADECODE1\"\n    ,\"POSITIONCODE1\" : \"POSITIONCODE1\"\n    ,\"HOMEPHONE\" : \"HOMEPHONE\"\n    ,\"CELLPHONE\" : \"CELLPHONE\"\n    ,\"IMUSERID\" : \"IMUSERID\"\n    ,\"NAMEENG\" : \"NAMEENG\"\n    ,\"SHORTNAME\" : \"SHORTNAME\"\n    ,\"MAILDOMAIN\" : \"MAILDOMAIN\"\n    ,\"POSITION1\" : \"POSITION1\"\n}]\n}",
+    "ServiceName__c": "employeeReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YEEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Account 연체 배치 수신I/F",
+    "DispatcherClass__c": "IF_OverdueReceptive",
+    "InterfaceId__c": "IF_SA_SF_0078",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Overdue2__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0078",
+    "ExampleParam__c": "{\r\n\"request\" : [{\r\n\"mdmCode\" : \"test\"\r\n,\"mdmName\" : \"test\"\r\n,\"salesEmployee\" : \"test\"\r\n,\"salesEmployeeName\" : \"test\"\r\n,\"paymentTerms\" : \"test\"\r\n,\"previousMonthBalance\" : \"test\"\r\n,\"accountsReceivable\" : \"test\"\r\n,\"totalBondBalance\" : \"test\"\r\n,\"after7DaysBonds\" : \"test\"\r\n,\"within15DaysBonds\" : \"test\"\r\n,\"within30DaysBonds\" : \"test\"\r\n,\"over31DaysBonds\" : \"test\"\r\n,\"branchTeam\" : \"test\"\r\n}]\r\n}",
+    "ServiceName__c": "overdueReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YFEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "현장관리를 위한 SC 사원의 점포(대리점) 정보 수신 I/F",
+    "DispatcherClass__c": "IF_PromotionScEmployeeReceptive",
+    "InterfaceId__c": "IF_SC_SF_0018",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Promotion__c",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sc/sf-0018",
+    "ExampleParam__c": null,
+    "ServiceName__c": "PromotionScEmployeeReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YGEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "연동서버 테스트",
+    "DispatcherClass__c": "IF_RPTestSendable",
+    "InterfaceId__c": "TEST_0001",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGkEAM",
+    "UriAddress__c": "/api/rest/sf/bi-0069",
+    "ExampleParam__c": null,
+    "ServiceName__c": "ProxyServerTest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YIEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "소재 샘플제작의뢰서 조회",
+    "DispatcherClass__c": "IF_SampleRequestSearchable",
+    "InterfaceId__c": "IF_SF_GW_0095",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/sf/gw-0095",
+    "ExampleParam__c": "D20190505293",
+    "ServiceName__c": "sampleRequestSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YJEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "CallOut 테스트",
+    "DispatcherClass__c": "IF_CallOutTest",
+    "InterfaceId__c": "IF_SF_TEST_0005",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "Account",
+    "TargetSystem__c": "a0W0w0000051TGiEAM",
+    "UriAddress__c": "/api/rest/sa-test-callouttest",
+    "ExampleParam__c": null,
+    "ServiceName__c": "CallOutTest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YKEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "제품 마스터 정보 조회 I/F",
+    "DispatcherClass__c": "IF_ProductSearchable",
+    "InterfaceId__c": "IF_MD_SF_0083",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "MDMProductMaster__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/soap/md/sf-0083",
+    "ExampleParam__c": "1024730",
+    "ServiceName__c": "productSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YLEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_CreateAnimals",
+    "InterfaceId__c": "IF_SF_TEST_0002",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGiEAM",
+    "UriAddress__c": "/api/rest/product",
+    "ExampleParam__c": null,
+    "ServiceName__c": "getProduct",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YMEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "선박 화물 추적 정보 실시간 조회",
+    "DispatcherClass__c": "IF_TrackingSearchable",
+    "InterfaceId__c": "IF_TD_SF_0026",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGpEAM",
+    "UriAddress__c": "/partners/track/v2/cargo-tracks/query?version=EA",
+    "ExampleParam__c": null,
+    "ServiceName__c": "shipmentTracking",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YNEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "선박 화물 추적 정보 Map View를 위한 Access Token",
+    "DispatcherClass__c": "IF_TrackingAccessToken",
+    "InterfaceId__c": "IF_SF_TD_0027",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGpEAM",
+    "UriAddress__c": "/partners/auth/authenticate",
+    "ExampleParam__c": null,
+    "ServiceName__c": "trackingAccessToken",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YOEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_CretopReceptive",
+    "InterfaceId__c": "IF_CT_SF_0027",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "Cretop__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0027",
+    "ExampleParam__c": null,
+    "ServiceName__c": "cretopReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YQEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "Account 여신 정보 실시간 조회",
+    "DispatcherClass__c": "IF_LoanSearchable",
+    "InterfaceId__c": "IF_SA_SF_0073",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "IF_Loan",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0073",
+    "ExampleParam__c": "7101990",
+    "ServiceName__c": "loanSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000272YREAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "MDM Account 실시간 조회",
+    "DispatcherClass__c": "IF_MDMAccountSearchable",
+    "InterfaceId__c": "IF_MD_SF_0084",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "MDMAccount__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/soap/md/sf-0084",
+    "ExampleParam__c": "1058595",
+    "ServiceName__c": "mdmAccountSearch",
+    "ExampleResponse__c": "{\n  \"mdmName\" : \"test\"\n  ,\"mdmCode\" : \"test\"\n  ,\"representativeName\" : \"test\"\n  ,\"mobile1\" : \"test\"\n  ,\"mobile2\" : \"test\"\n  ,\"zipCode\" : \"test\"\n  ,\"address\" : \"test\"\n  ,\"addressDetail\" : \"test\"\n  ,\"salesOrganization\" : \"test\"\n  ,\"salesOrganizationName\" : \"test\"\n  ,\"division\" : \"test\"\n  ,\"divisionName\" : \"test\"\n  ,\"branchTeam\" : \"test\"\n  ,\"branchTeamName\" : \"test\"\n  ,\"salesEmployeeNumber\" : \"test\"\n  ,\"salesEmployeeName\" : \"test\"\n  ,\"registrationNumber\" : \"test\"\n  ,\"billingHold\" : \"test\"\n  ,\"orderHold\" : \"test\"\n  ,\"deliveryHold\" : \"test\"\n  ,\"distributionChannel\" : \"test\"\n  ,\"country\" : \"test\"\n  ,\"currency_x\" : \"test\"\n  ,\"deliveryCondition\" : \"test\"\n  ,\"accAssignmentGroup\" : \"test\"\n  ,\"distributionLarge\" : \"test\"\n  ,\"distributionLargeName\" : \"test\"\n  ,\"distributionMiddle\" : \"test\"\n  ,\"distributionMiddleName\" : \"test\"\n  ,\"distributionSmall\" : \"test\"\n  ,\"distributionSmallName\" : \"test\"\n  ,\"lv1Hierarchy\" : \"test\"\n  ,\"lv1HierarchyName\" : \"test\"\n  ,\"lv2Hierarchy\" : \"test\"\n  ,\"lv2HierarchyName\" : \"test\"\n  ,\"lv3Hierarchy\" : \"test\"\n  ,\"lv3HierarchyName\" : \"test\"\n  ,\"ediLinkInfo\" : \"test\"\n  ,\"priceListType\" : \"test\"\n  ,\"priceListTypeName\" : \"test\"\n  ,\"generalPlant\" : \"test\"\n  ,\"refrigerationPlant\" : \"test\"\n  ,\"freezePlant\" : \"test\"\n  ,\"billingAddress\" : \"test\"\n  ,\"billingAddressName\" : \"test\"\n  ,\"paymentAddress\" : \"test\"\n  ,\"paymentAddressName\" : \"test\"\n}"
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027SuBEAU"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "수출 계약 승인 정보 배치 수신 I/F",
+    "DispatcherClass__c": "IF_ConsultationReceptive",
+    "InterfaceId__c": "IF_GW_SF_0096",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Consultation__c",
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/gw/sf-0096",
+    "ExampleParam__c": null,
+    "ServiceName__c": "consultationContractReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w000002935zEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "임직원 겸직 정보 인터페이스",
+    "DispatcherClass__c": "IF_ConcurrentPositionReceptive",
+    "InterfaceId__c": "IF_HR_SF_0137",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "ConcurrentPosition__c",
+    "TargetSystem__c": "a0W0w0000051TGoEAM",
+    "UriAddress__c": "/api/rest/hr/sf-0137",
+    "ExampleParam__c": null,
+    "ServiceName__c": "concurrentPositionReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027Su1EAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "소재 무상샘플의뢰서 승인 정보 배치 수신 I/F",
+    "DispatcherClass__c": "IF_ConsultationReceptive",
+    "InterfaceId__c": "IF_GW_SF_0095",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Consultation__c",
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/gw/sf-0095",
+    "ExampleParam__c": null,
+    "ServiceName__c": "consultationSampleReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027ebYEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "내수 주문 관련 시험성적서 수신 I/F",
+    "DispatcherClass__c": "IF_TrialReportReceptive",
+    "InterfaceId__c": "IF_SA_SF_0097",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "ContentVersion",
+    "TargetSystem__c": "a0W0w000009USGhEAO",
+    "UriAddress__c": "/api/rest/sa/sf-0097",
+    "ExampleParam__c": null,
+    "ServiceName__c": "trialReportReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000028BfdEAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "대량 메일 주소 전송용 Contact 목록 전송 IF",
+    "DispatcherClass__c": "IF_BulkMailContactSendable",
+    "InterfaceId__c": "IF_SF_GW_0126",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "Contact",
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/sf/gw-0126",
+    "ExampleParam__c": "{\r\n  \"type\" : true,\r\n  \"title\" : \"test\",\r\n  \"emailList\" : [ \"tjdrbb1006@naver.com\", \"jongmin.choi@naver.com\" ],\r\n  \"encryptKey\" : [ \"testKey1\", \"testKey2\" ],\r\n  \"historyList\" : [ \"historyKey1\", \"historyKey2\" ],\r\n  \"contents\" : \"test\"\r\n}",
+    "ServiceName__c": "bulkMailContactSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000028cCDEAY"
+    },
+    "RecordTypeId": "0120w000001XadQAAS",
+    "Active__c": true,
+    "Description__c": "소재 내수 Account 연체 정보 실시간 조회",
+    "DispatcherClass__c": "IF_DomesticOverdueSearchable",
+    "InterfaceId__c": "IF_SA_SF_0132",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "DomesticOverdue__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0132",
+    "ExampleParam__c": null,
+    "ServiceName__c": "domesticOverdueSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXPEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_PromotionScEmployeeWorkReceptive",
+    "InterfaceId__c": "IF_SC_SF_0053",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Promotion__c",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sc/sf-0053",
+    "ExampleParam__c": null,
+    "ServiceName__c": "PromotionScEmployeeWorkReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXQEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_SCEmployeeMasterReceptive",
+    "InterfaceId__c": "IF_SC_SF_0091",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "SCEmployeeMaster__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sc/sf-0091",
+    "ExampleParam__c": null,
+    "ServiceName__c": "SCEmployeeMasterReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXREA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": null,
+    "DispatcherClass__c": "IF_PromotionScEmployeeMasterReceptive",
+    "InterfaceId__c": "IF_SC_SF_0035",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Promotion__c",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sc/sf-0035",
+    "ExampleParam__c": null,
+    "ServiceName__c": "PromotionScEmployeeMasterReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXSEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "무상 주문 정보 수신 I/F",
+    "DispatcherClass__c": "IF_SampleReceptive",
+    "InterfaceId__c": "IF_SA_SF_0115",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0115",
+    "ExampleParam__c": null,
+    "ServiceName__c": "SampleReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXTEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "수출 Account 여신 수신 IF",
+    "DispatcherClass__c": "IF_ExportLoanReceptive",
+    "InterfaceId__c": "IF_SA_SF_0113",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Export_Loan2__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0113",
+    "ExampleParam__c": null,
+    "ServiceName__c": "exportLoanReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PXUEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "수출 Account 여신 실시간 조회",
+    "DispatcherClass__c": "IF_ExportLoanSearchable",
+    "InterfaceId__c": "IF_SA_SF_0112",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "ExportLoan__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sa/sf-0112",
+    "ExampleParam__c": null,
+    "ServiceName__c": "exportloanSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000028G6yEAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "메일 수집 동의자 정보 송신 IF",
+    "DispatcherClass__c": "IF_MailDataSendable",
+    "InterfaceId__c": "IF_SF_GW_0125",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "Employee__c",
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/sf/gw-0125",
+    "ExampleParam__c": null,
+    "ServiceName__c": "mailDataSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027RbKEAU"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "SAP 내수 배송(LE) 정보 수신 I/F",
+    "DispatcherClass__c": "IF_SAPTransportDocReceptive",
+    "InterfaceId__c": "IF_SA_SF_0118",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_TransportDoc__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0118",
+    "ExampleParam__c": null,
+    "ServiceName__c": "SAPtransportDocReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027S1EEAU"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "VoC 보상 품의 승인 정보 배치 수신 I/F",
+    "DispatcherClass__c": "IF_ConsultationReceptive",
+    "InterfaceId__c": "IF_GW_SF_0111",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_Consultation__c",
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/gw/sf-0111",
+    "ExampleParam__c": null,
+    "ServiceName__c": "consultationVOCReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000028D29EAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "MDM 판매 제품 마스터 정보 수신 I/F",
+    "DispatcherClass__c": "IF_SalesProductReceptive",
+    "InterfaceId__c": "IF_MD_SF_0134",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "MDMProductMaster__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/rest/md/sf-0134",
+    "ExampleParam__c": null,
+    "ServiceName__c": "salesProductReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027Z3sEAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "배송 안내 메시지 수신자 연락처 정보 송신 인터페이스",
+    "DispatcherClass__c": "IF_TransportContactSendable",
+    "InterfaceId__c": "IF_SF_TM_0022",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_TransportContact__c",
+    "TargetSystem__c": "a0W0w0000051TGsEAM",
+    "UriAddress__c": "/api/rest/sf/tm-0022",
+    "ExampleParam__c": "[{\"tmsNoti\":\"false\",\"deliveryCode\":\"1064804\",\"contactSerialNumber\":1,\"contactPhone\":\"010-9394-8316\",\"contactName\":\"나경인\",\"companyCode\":\"DAESANG\"}]",
+    "ServiceName__c": "transportContactSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bcnEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountCreditRateReceptive",
+    "InterfaceId__c": "IF_CT_SF_0031",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountCreditRate__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0031",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountCreditRateReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bcdEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountIntellectualReceptive",
+    "InterfaceId__c": "IF_CT_SF_0029",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountIntellectual__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0029",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountIntellectualReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bcOEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountSalesStatusReceptive",
+    "InterfaceId__c": "IF_CT_SF_0028",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountSalesStatus__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0028",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountSalesStatusReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bcsEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountCEOInfoReceptive",
+    "InterfaceId__c": "IF_CT_SF_0033",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountCEOInfo__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0033",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountCEOInfoReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bciEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountFinancialReceptive",
+    "InterfaceId__c": "IF_CT_SF_0030",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountFinancial__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0030",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountFinancialReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bcjEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "기업 고객 정보 목록(기업개황정보, 재무정보, 신용정보) 수신 IF",
+    "DispatcherClass__c": "IF_AccountCooperationCompanyReceptive",
+    "InterfaceId__c": "IF_CT_SF_0032",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "AccountCooperationCompany__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0032",
+    "ExampleParam__c": null,
+    "ServiceName__c": "accountCooperationCompanyReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027drsEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "관리형 사업부(농협, 식자재) 최저 출고가 전송",
+    "DispatcherClass__c": "IF_SAPPromotionPlanItemSendable",
+    "InterfaceId__c": "IF_SF_SA_0068",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sf/sa-0068",
+    "ExampleParam__c": null,
+    "ServiceName__c": "sendSapPromotionPlanItem",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027drnEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "관리형 사업부 행사가격 전자결재 승인정보 전송",
+    "DispatcherClass__c": "IF_SAPPromotionPlanSendable",
+    "InterfaceId__c": "IF_SF_SA_0067",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sf/sa-0067",
+    "ExampleParam__c": null,
+    "ServiceName__c": "sendSapPromotionPlan",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027kLBEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "파일 삭제시 삭제 정보 송신 I/F",
+    "DispatcherClass__c": "IF_DRMDeleteSendable",
+    "InterfaceId__c": "IF_SF_SCG_0128",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000052JpNEAU",
+    "UriAddress__c": "/api/rest/sf/cg-0128",
+    "ExampleParam__c": null,
+    "ServiceName__c": "drmDeleteSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000028cC8EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "소재 내수 Account 연체 정보 수신 IF",
+    "DispatcherClass__c": "IF_DomesticOverdueReceptive",
+    "InterfaceId__c": "IF_SA_SF_0133",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_DomesticOverdue__c",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rest/sa/sf-0133",
+    "ExampleParam__c": null,
+    "ServiceName__c": "domesticOverdueReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027PpkEAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "급식거래처 수신 I/F",
+    "DispatcherClass__c": "IF_SchoolAccountReceptive",
+    "InterfaceId__c": "IF_MD_SF_0099",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_SchoolAccount__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/rest/md/sf-0099",
+    "ExampleParam__c": null,
+    "ServiceName__c": "schoolAccountReceive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027S9yEAE"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "고객 파트너 기능 정보 수신 I/F",
+    "DispatcherClass__c": "IF_PartnerFunctionReceptive",
+    "InterfaceId__c": "IF_MD_SF_0116",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_PartnerFunction__c",
+    "TargetSystem__c": "a0W0w0000051TGnEAM",
+    "UriAddress__c": "/api/rest/md/sf-0116",
+    "ExampleParam__c": null,
+    "ServiceName__c": "partnerFunctionReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027SASEA2"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "수출계약 기안품의서 실시간 조회",
+    "DispatcherClass__c": "IF_ExportContractSearchable",
+    "InterfaceId__c": "IF_SF_GW_0096",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGmEAM",
+    "UriAddress__c": "/api/rest/sg/gw-0096",
+    "ExampleParam__c": "D20190505293",
+    "ServiceName__c": "exportContractSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027wbDEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "SAP 자재 견적 가격 정보 조회",
+    "DispatcherClass__c": "IF_SAPApprovePriceSearchable",
+    "InterfaceId__c": "IF_SA_SF_0131",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "QuoteLineItem",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sf/sa-0131",
+    "ExampleParam__c": null,
+    "ServiceName__c": "approvePriceSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027TU4EAM"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "TMS 배송 정보 수신 I/F",
+    "DispatcherClass__c": "IF_TransportDocBulkSearchable",
+    "InterfaceId__c": "IF_TM_SF_0119",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_TransportDoc__c, IF_TransportItem__c",
+    "TargetSystem__c": "a0W0w0000051TGsEAM",
+    "UriAddress__c": "/api/rest/tm/sf-0119",
+    "ExampleParam__c": "8128458341,8128445645,8128436161",
+    "ServiceName__c": "transportDocBulkSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w00000281uJEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "과거 신용 등급 수신 IF",
+    "DispatcherClass__c": "IF_CreditInfoReceptive",
+    "InterfaceId__c": "IF_CT_SF_0034",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "CreditInfo__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/rest/ct/sf-0034",
+    "ExampleParam__c": null,
+    "ServiceName__c": "creditInfoReceptive",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w000002885zEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "견적 최저가 조회",
+    "DispatcherClass__c": "IF_SAPQuoteMinimumPriceSearchable",
+    "InterfaceId__c": "IF_SF_SA_0135",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "QuoteLineItem",
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sf/sa-0135",
+    "ExampleParam__c": null,
+    "ServiceName__c": "quoteMinimumPriceSearch",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027XBXEA2"
+    },
+    "RecordTypeId": "0120w000001XadQAAS",
+    "Active__c": true,
+    "Description__c": "Webex 화상 링크 정보 생성",
+    "DispatcherClass__c": "IF_WebexSendable",
+    "InterfaceId__c": "IF_RS_SF_0066",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000052CAFEA2",
+    "UriAddress__c": "/api/api/rs/sf-0066",
+    "ExampleParam__c": "{\"type\": \"C\", \"title\": \"메일테스트\", \"starttime\" : \"2022-11-29T16:00:00Z\", \"endtime\": \"2022-11-29T17:00:00Z\", \"scheduleid\":\"\", \"timezone\": \"+09:00\", \"scheduletype\": \"0\", \"recordingyn\": \"N\", \"calyn\" : \"N\"}",
+    "ServiceName__c": "webexSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027ajoEAA"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "소재 거래처 정보 송신 IF",
+    "DispatcherClass__c": "IF_TransportAccountSendable",
+    "InterfaceId__c": "IF_SF_TM_0123",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "IF_TransportContact__c",
+    "TargetSystem__c": "a0W0w0000051TGsEAM",
+    "UriAddress__c": "/api/rest/sf/tm-0123",
+    "ExampleParam__c": null,
+    "ServiceName__c": "transportAccountSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bK0EAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "DRM 해제 요청 I/F",
+    "DispatcherClass__c": "IF_DRMDecryptRequestable",
+    "InterfaceId__c": "IF_SF_DRM_0057",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "ContentVersion",
+    "TargetSystem__c": "a0W0w0000052JpNEAU",
+    "UriAddress__c": "/api/api/sf/rm-0057",
+    "ExampleParam__c": null,
+    "ServiceName__c": "drmDecryptRequest",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027bMBEAY"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "DSW Message Notification 송신 I/F",
+    "DispatcherClass__c": "IF_NotificationSendable",
+    "InterfaceId__c": "IF_SF_DS_0004",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000052KxIEAU",
+    "UriAddress__c": "/api/rest/sf/ds-0004",
+    "ExampleParam__c": null,
+    "ServiceName__c": "notificationSend",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027dcKEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "행사 계획 가격 승인 정보 조회",
+    "DispatcherClass__c": "IF_SAPPriceApproveSearchable",
+    "InterfaceId__c": "IF_SF_SA_0129",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGhEAM",
+    "UriAddress__c": "/api/rfc/sf/sa-0129",
+    "ExampleParam__c": null,
+    "ServiceName__c": "priceApproveSearchable",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027dcAEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "행사 계획 삭제",
+    "DispatcherClass__c": "IF_PromotionPlanDeleteSendable",
+    "InterfaceId__c": "IF_SF_SC_0117",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": null,
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sf/sc-0117",
+    "ExampleParam__c": null,
+    "ServiceName__c": "sendPromotionPlanDelete",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027dcFEAQ"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "행사 인력 배치 삭제",
+    "DispatcherClass__c": "IF_PromotionScEmployeeDelete",
+    "InterfaceId__c": "IF_SC_SF_0124",
+    "MapperClass__c": null,
+    "Method__c": "POST",
+    "TargetObject__c": "PromotionScEmployee__c",
+    "TargetSystem__c": "a0W0w0000051TGtEAM",
+    "UriAddress__c": "/api/rest/sc/sf-0124",
+    "ExampleParam__c": null,
+    "ServiceName__c": "promotionScEmployeeDelete",
+    "ExampleResponse__c": null
+  },
+  {
+    "attributes": {
+      "type": "InterfaceRouteManager__c",
+      "url": "/services/data/v56.0/sobjects/InterfaceRouteManager__c/a0V0w0000027eFpEAI"
+    },
+    "RecordTypeId": "0120w000001XadPAAS",
+    "Active__c": true,
+    "Description__c": "신규 기업에 대한 수신 I/F(사업자등록번호, 기업체명)",
+    "DispatcherClass__c": "IF_NewCretopReceptive",
+    "InterfaceId__c": "IF_SF_CT_0028",
+    "MapperClass__c": null,
+    "Method__c": "GET",
+    "TargetObject__c": "Cretop__c",
+    "TargetSystem__c": "a0W0w0000051TGlEAM",
+    "UriAddress__c": "/api/sftp/sf/ct-0028",
+    "ExampleParam__c": null,
+    "ServiceName__c": "newCretopReceptive",
+    "ExampleResponse__c": null
+  }
+]

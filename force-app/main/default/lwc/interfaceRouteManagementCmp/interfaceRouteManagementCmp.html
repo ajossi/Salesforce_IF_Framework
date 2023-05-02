@@ -1,0 +1,82 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="12">
+            <div class="slds-page-header" style="margin-bottom: 10px;">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:clone" title="medium size (default)"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <lightning-layout>
+                            <lightning-layout-item size="12">
+                                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="">Interface Route Management</h1>
+                            </lightning-layout-item>                            
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>    
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout style="height: 80%; padding-bottom: 10px;">
+        <lightning-layout-item size="12" >
+            <div class="slds-tabs_card" style="margin-bottom: 10px;">
+                <template if:true={isSubmit}>
+                    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                </template>
+                <template if:true={loaded}>
+                    <lightning-layout style="height: 100%;">
+                        <lightning-layout-item class="layout-item" size="12">
+                            <div class="layout-item-combo">
+                                <lightning-combobox
+                                            style="width: 25%; display: inline-block"
+                                            name="legacy"
+                                            label="Legacy"
+                                            value={legacyValue}
+                                            placeholder="Select Legacy"
+                                            options={legacyOptions}
+                                            onchange={changeLegacy}>
+                                </lightning-combobox>
+                                <lightning-combobox
+                                            style="width: 25%; display: inline-block; margin-left: 10px;"
+                                            name="interface"
+                                            label="Interface"
+                                            value={interfaceValue}
+                                            placeholder="Select Interface"
+                                            options={interfaceOptions}
+                                            onchange={changeInterface}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="layout-item-rich" style="margin-top: 10px;">
+                                <lightning-textarea 
+                                    style="width: 50%; height: 30%;"
+                                    name="params" 
+                                    label="Params"
+                                    value={params}
+                                    onchange={changeParams}
+                                    data-recid="params"
+                                    >
+                                </lightning-textarea>
+                            </div>
+                            <lightning-button 
+                                variant="submit" 
+                                label="submit" 
+                                title="submit" 
+                                onclick={clickSubmit} 
+                                class="slds-m-right_x-small">
+                            </lightning-button>
+                            <div class="layout-item-rich" style="margin-top: 10px;">
+                                <lightning-textarea
+                                    style="width: 50%; height: 30%;" 
+                                    name="result" 
+                                    label="Result" 
+                                    value={result}
+                                    readonly>
+                                </lightning-textarea>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

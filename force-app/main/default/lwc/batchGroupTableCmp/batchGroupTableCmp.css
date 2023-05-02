@@ -1,0 +1,45 @@
+.tab-active {
+    --sds-c-tabs-scoped-color-text-active: var(--lwc-brandAccessibleActive);
+}
+
+.footer-button{
+    margin-right: 3px;
+}
+
+.modal-contents{
+    background-color: white;
+    min-width: 100% !important;
+    min-height: calc(85vh - 15rem)!important;
+    max-height: calc(85vh - 15rem)!important;
+    overflow-y: hidden !important;
+}
+
+.text-area {
+    --sds-c-textarea-sizing-min-height: 200px;
+}
+
+textarea{
+    resize: none;
+}
+
+.slds-tabs_default__content.slds-show{
+    padding:0px !important;
+}
+
+.div-display-none{
+    display: none;
+}
+
+.div-display-block{
+    display: block;
+}
+/* 
+    margin: auto;
+    margin-top: 10px; */
+.table_area{
+    margin-top: 10px;
+}
+
+.button_area{
+    align-self: center;
+}

@@ -1,0 +1,99 @@
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-c-modal-shadow">
+        <div class="slds-modal__container">
+            <div class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                <lightning-button-icon 
+                    class="slds-m-left_xx-small"
+                    icon-name="utility:close"
+                    variant="container"
+                    onclick={handleClose}
+                    >
+                </lightning-button-icon>
+            </div>
+            <div class="slds-modal__header">
+                <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Edit Form</h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div>
+                    <template if:false={editOpen}>
+                        <div class="slds-spinner">
+                            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                        </div>
+                    </template>
+                    <template if:true={editGroup}>
+                        <lightning-record-edit-form
+                            onsuccess={handleSuccess}
+                            onerror={handleError}
+                            onload={handleLoad}
+                            record-id={recordId}
+                            object-api-name="BatchGroup__c"
+                            >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="Name"> </lightning-input-field>
+                            <lightning-input-field field-name="GroupName__c"> </lightning-input-field>
+                            <lightning-input-field field-name="CronText__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Description__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Schedule__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Interval__c"> </lightning-input-field>
+                                <lightning-button
+                                    class="slds-m-top_small lwc-button"
+                                    variant="brand"
+                                    type="submit"
+                                    name="update"
+                                    label="Update"
+                                >
+                                </lightning-button>
+                        </lightning-record-edit-form>
+                    </template>
+                    <template if:true={editSequence}>
+                        <lightning-record-edit-form
+                            onsuccess={handleSuccess}
+                            onerror={handleError}
+                            onload={handleLoad}
+                            record-id={recordId}
+                            object-api-name="BatchSequenceManager__c"
+                            >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="Name"> </lightning-input-field>
+                            <lightning-input-field field-name="Sequence__c"> </lightning-input-field>
+                            <lightning-input-field field-name="BatchGroup__c"> </lightning-input-field>
+                            <lightning-input-field field-name="BatchManager__c"> </lightning-input-field>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                name="update"
+                                label="Update"
+                            >
+                            </lightning-button>
+                        </lightning-record-edit-form>
+                    </template>
+                    <template if:true={editBatch}>
+                        <lightning-record-edit-form
+                            onsuccess={handleSuccess}
+                            onerror={handleError}
+                            onload={handleLoad}
+                            record-id={recordId}
+                            object-api-name="BatchManager__c"
+                            >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="Name"> </lightning-input-field>
+                            <lightning-input-field field-name="Description"> </lightning-input-field>
+                            <lightning-input-field field-name="Active__c"> </lightning-input-field>
+                            <lightning-input-field field-name="ScopeSize__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Params__c"> </lightning-input-field>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                name="update"
+                                label="Update"
+                            >
+                            </lightning-button>
+                        </lightning-record-edit-form>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

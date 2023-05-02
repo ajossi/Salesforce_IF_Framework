@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="12">
+            <div class="slds-page-header" style="margin-bottom: 10px;">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:clone" title="medium size (default)"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <lightning-layout>
+                            <lightning-layout-item size="12">
+                                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="">Batch Group Management</h1>
+                            </lightning-layout-item>                            
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>    
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="12">
+            <div class="slds-page-header">
+                <lightning-tabset>
+                    <lightning-tab label="Group Table">
+                        <c-batch-group-table-cmp></c-batch-group-table-cmp>
+                    </lightning-tab>
+                    <lightning-tab label="Schedule">
+                        <c-batch-group-schedule-cmp></c-batch-group-schedule-cmp>
+                    </lightning-tab>
+                    <lightning-tab label="Batch">
+                        <c-batch-group-execute-cmp></c-batch-group-execute-cmp>
+                    </lightning-tab>
+                </lightning-tabset>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

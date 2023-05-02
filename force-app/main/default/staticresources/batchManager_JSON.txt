@@ -1,0 +1,563 @@
+[
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJ87AAE"
+    },
+    "Name": "IF_SampleBatch",
+    "Active__c": true,
+    "Description__c": "SAP 무상 주문 정보 Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJEyAAM"
+    },
+    "Name": "IF_SchoolAccountBatch",
+    "Active__c": true,
+    "Description__c": "MDM 급식거래처 마스터 정보 IF to Biz Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lK9FAAU"
+    },
+    "Name": "IF_ConsultationBatch",
+    "Active__c": true,
+    "Description__c": "문서 승인정보 배치",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000xnPnAAI"
+    },
+    "Name": "IF_EmployeeUserBatch",
+    "Active__c": true,
+    "Description__c": "임직원 정보 적재 후 User 매핑 작업 배치",
+    "ScopeSize__c": 1000,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lK79AAE"
+    },
+    "Name": "IF_ExportLoanDeleteBatch",
+    "Active__c": true,
+    "Description__c": "Account 수출 여신 배치 수신 전 Bulk Data 삭제",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lIkjAAE"
+    },
+    "Name": "IF_ShipmentToSearchBatch",
+    "Active__c": true,
+    "Description__c": "수출배송정보 Base Object > ObjectDelivery_Search Object Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lIkkAAE"
+    },
+    "Name": "IF_DeliveryToSearchBatch",
+    "Active__c": true,
+    "Description__c": "납품정보 Base Object > ObjectDelivery_Search Object Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJYFAA2"
+    },
+    "Name": "IF_SAPTransportDocBatch",
+    "Active__c": true,
+    "Description__c": "SAP 내수 배수(LE) 정보 Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJjIAAU"
+    },
+    "Name": "IF_DashBoardEmployeeBatch",
+    "Active__c": true,
+    "Description__c": "Account별 Salesgroup 코드 정보 수신 Batch (IF -> Base Obj)",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJxiAAE"
+    },
+    "Name": "IF_PartnerFunctionBatch",
+    "Active__c": true,
+    "Description__c": "고객 파트너 기능 정보 Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJx9AAE"
+    },
+    "Name": "IF_TransportDocToSearchBatch",
+    "Active__c": true,
+    "Description__c": null,
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lORvAAM"
+    },
+    "Name": "IF_TransportDocSearchBatch",
+    "Active__c": true,
+    "Description__c": "TMS 배송 정보 조회 배치",
+    "ScopeSize__c": 300,
+    "Params__c": "-30"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRIIAA2"
+    },
+    "Name": "IF_OrderCompletedBatch",
+    "Active__c": true,
+    "Description__c": "17시, 24시에 출고확정인데 완료처리 되지 않은 건들(내수)에 대해 강제 완료 처리",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRJ1AAM"
+    },
+    "Name": "IF_TransportContactBatch",
+    "Active__c": true,
+    "Description__c": null,
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRypAAE"
+    },
+    "Name": "ds_PartnerAccountPlanCurrentMonthBatch",
+    "Active__c": true,
+    "Description__c": "2차상 당월 신규 목표 적재 배치",
+    "ScopeSize__c": 50,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWCAA2"
+    },
+    "Name": "IF_AccountBatch",
+    "Active__c": true,
+    "Description__c": "MDM Account 수신 I/F 배치",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWDAA2"
+    },
+    "Name": "TestBatch2",
+    "Active__c": true,
+    "Description__c": "테스트용 배치",
+    "ScopeSize__c": 1,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWEAA2"
+    },
+    "Name": "TestBatch",
+    "Active__c": true,
+    "Description__c": "테스트용 배치",
+    "ScopeSize__c": 1,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWFAA2"
+    },
+    "Name": "TestBatch3",
+    "Active__c": false,
+    "Description__c": null,
+    "ScopeSize__c": 1,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWGAA2"
+    },
+    "Name": "TestQueueable",
+    "Active__c": true,
+    "Description__c": null,
+    "ScopeSize__c": null,
+    "Params__c": "test"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWHAA2"
+    },
+    "Name": "IF_ScEmployeeMasterBatch",
+    "Active__c": true,
+    "Description__c": "IF_SC_SF_0091",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWIAA2"
+    },
+    "Name": "IF_PromotionScEmployeeBatch",
+    "Active__c": true,
+    "Description__c": null,
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWJAA2"
+    },
+    "Name": "IF_ShipmentItemBatch",
+    "Active__c": true,
+    "Description__c": "SAP 수출 배송 수송 상세 정보 Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWKAA2"
+    },
+    "Name": "IF_PromotionScEmployeeWorkBatch",
+    "Active__c": true,
+    "Description__c": "IF_SC_SF_0053",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWLAA2"
+    },
+    "Name": "IF_ShipmentBatch",
+    "Active__c": true,
+    "Description__c": "SAP 수출 배송 수송 정보 Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWMAA2"
+    },
+    "Name": "IF_DeliveryBatch",
+    "Active__c": true,
+    "Description__c": "수출 배송 정보 Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWNAA2"
+    },
+    "Name": "IF_DeliveryItemBatch",
+    "Active__c": true,
+    "Description__c": "수출 배송 상세 정보 Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWOAA2"
+    },
+    "Name": "IF_TrackingSendableBatch",
+    "Active__c": false,
+    "Description__c": "Shipment obj -> insert가 발생했을 때, 해당 레코드의 'Master BL' 값으로 Tradlinx 송신 인터페이스를 발생",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWPAA2"
+    },
+    "Name": "IF_OrderItemBatch",
+    "Active__c": true,
+    "Description__c": "주문 상세 정보 I/F Object > Base Object Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWQAA2"
+    },
+    "Name": "IF_EmployeeBatch",
+    "Active__c": true,
+    "Description__c": "임직원정보 수신 I/F(IF Object -> Base Object)",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWRAA2"
+    },
+    "Name": "IF_DepartmentBatch",
+    "Active__c": true,
+    "Description__c": "조직정보 수신 I/F(IF Object -> Base Object)",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWUAA2"
+    },
+    "Name": "IF_OrderBatch",
+    "Active__c": true,
+    "Description__c": "SAP주문정보 I/F Object > Base Object Convert Batch",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWVAA2"
+    },
+    "Name": "IF_PromotionScEmployeeMasterBatch",
+    "Active__c": true,
+    "Description__c": "IF_SC_SF_0035",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWWAA2"
+    },
+    "Name": "IF_OrderToSearchBatch",
+    "Active__c": true,
+    "Description__c": "주문정보 to 주문정보검색화면 배치",
+    "ScopeSize__c": 500,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWXAA2"
+    },
+    "Name": "IF_MDMAccountQueueable",
+    "Active__c": true,
+    "Description__c": "MDM Account 수신 I/F Convert Batch",
+    "ScopeSize__c": null,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWYAA2"
+    },
+    "Name": "IF_TrackingBatch",
+    "Active__c": true,
+    "Description__c": "선박 화물 추적 정보 갱신(IF object -> Base object)",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWZAA2"
+    },
+    "Name": "IF_TrackingSearchableBatch",
+    "Active__c": true,
+    "Description__c": "선박 화물 추적 정보 갱신 I/F 호출 배치",
+    "ScopeSize__c": 50,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lGWaAAM"
+    },
+    "Name": "IF_ProductBatch",
+    "Active__c": true,
+    "Description__c": "MDM 제품 정보 Convert 배치",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJnrAAE"
+    },
+    "Name": "IF_MasterPartnerAccountBatch",
+    "Active__c": true,
+    "Description__c": "동일한 사업자번호를 가진 2차상 정보가 다 건 생성되었을 경우, LV1(Master)에 해당하는 정보 생성 및 Junction Object 생성",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJn8AAE"
+    },
+    "Name": "IF_OverdueDeleteBatch",
+    "Active__c": true,
+    "Description__c": "Account 연체(채권에 대한) 배치 수신 전 Bulk Data 삭제",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lJnmAAE"
+    },
+    "Name": "IF_PartnerAccountBatch",
+    "Active__c": true,
+    "Description__c": "2차상 마스터 정보 Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lKS2AAM"
+    },
+    "Name": "IF_TransportDocBatch",
+    "Active__c": true,
+    "Description__c": "TransportDoc Convert Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lMWAAA2"
+    },
+    "Name": "IF_OrderChangeBatch",
+    "Active__c": true,
+    "Description__c": "주문정보 삭제 처리(flag) 배치",
+    "ScopeSize__c": 500,
+    "Params__c": "2"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lR6bAAE"
+    },
+    "Name": "IF_PartnerAccountAggregateBatch",
+    "Active__c": true,
+    "Description__c": "2차상 생성 후(LV1까지) 2차상 데이터를 통하여 집계 및 PartnerAccountPlan__c, PartnerAccountPlanDetail__c에 업데이트",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRGlAAM"
+    },
+    "Name": "IF_TransportContactSendableBatch",
+    "Active__c": true,
+    "Description__c": "배송 안내 메시지 수신자 연락처 정보 송신 인터페이스 호출을 위한 Batch",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRhUAAU"
+    },
+    "Name": "IF_DeliveryDeleteBatch",
+    "Active__c": true,
+    "Description__c": "배송정보 삭제 처리(flag) 배치",
+    "ScopeSize__c": 500,
+    "Params__c": "2"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lRhPAAU"
+    },
+    "Name": "IF_LogDeleteBatch",
+    "Active__c": true,
+    "Description__c": "로그 삭제 배치(n일을 제외한)",
+    "ScopeSize__c": 500,
+    "Params__c": "2"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lS10AAE"
+    },
+    "Name": "IF_DeliveryItemDeleteBatch",
+    "Active__c": true,
+    "Description__c": "납품자재정보 삭제 처리(flag) 배치",
+    "ScopeSize__c": 500,
+    "Params__c": "2"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000lSz0AAE"
+    },
+    "Name": "IF_DeliveryConfirmationBatch",
+    "Active__c": true,
+    "Description__c": "납품 자재 생성 후 출고 확정 처리할 데이터 확인 배치",
+    "ScopeSize__c": 200,
+    "Params__c": null
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000nbtUAAQ"
+    },
+    "Name": "IF_OrderItemDeleteBatch",
+    "Active__c": true,
+    "Description__c": "주문자재 정보 삭제 처리(flag) 배치",
+    "ScopeSize__c": 500,
+    "Params__c": "2"
+  },
+  {
+    "attributes": {
+      "type": "BatchManager__c",
+      "url": "/services/data/v56.0/sobjects/BatchManager__c/a130w000000xFbsAAE"
+    },
+    "Name": "IF_NotificationSendableBatch",
+    "Active__c": true,
+    "Description__c": "Notification IF 송신 배치",
+    "ScopeSize__c": 1,
+    "Params__c": null
+  }
+]

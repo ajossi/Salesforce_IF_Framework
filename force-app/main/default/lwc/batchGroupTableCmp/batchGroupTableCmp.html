@@ -1,0 +1,75 @@
+<template>
+  <lightning-layout style="padding-bottom: 10px;">
+      <lightning-layout-item size="12" >
+          <div class="slds-tabs_card" style="min-height: 300px; margin-top: 10px;">
+              <template if:true={loaded}>
+                  <lightning-layout style="height: 100%;" class="top_area">
+                      <lightning-layout-item class="layout-item combobox_area" size="6">
+                          <div class="layout-item-combo">
+                              <lightning-combobox
+                                          style="width: 25%; display: inline-block"
+                                          name="group"
+                                          label="Batch Group"
+                                          value={groupValue}
+                                          placeholder="Select Batch Group"
+                                          options={groupOptions}
+                                          onchange={groupChange}>
+                              </lightning-combobox>
+                          </div>
+                       </lightning-layout-item>
+                       <lightning-layout-item class="layout-item button_area" size="6">
+                        <div style="float: right">
+                          <lightning-button 
+                              variant="Neutral" 
+                              label="Group Edit" 
+                              onclick={groupEditClick} 
+                              class="slds-m-left_x-small"
+                              value={groupId}
+                        ></lightning-button>
+                        <lightning-button 
+                              variant="Neutral" 
+                              label="Sequence Edit" 
+                              onclick={sequenceEditClick} 
+                              class="slds-m-left_x-small"
+                              value={sequenceId}
+                        ></lightning-button>
+                        <lightning-button 
+                              variant="Neutral" 
+                              label="Batch Edit" 
+                              onclick={batchEditClick} 
+                              class="slds-m-left_x-small"
+                              value={batchId}
+                        ></lightning-button>
+                        </div>
+                        
+                       </lightning-layout-item>
+                    </lightning-layout>
+                    <lightning-layout style="height: 100%;" class="middle_area">
+                        <lightning-layout-item class="layout-item table_area" size="12">
+                          <div style="height: 300px;">
+                              <lightning-datatable
+                                      key-field="id"
+                                      data={data}
+                                      columns={columns}
+                                      onrowselection={getSelectedRecord}>
+                                      <template if:false={data}>
+                                        No data to display
+                                      </template>
+                              </lightning-datatable>
+                          </div>
+                      </lightning-layout-item>
+                  </lightning-layout>
+              </template>
+          </div>
+      </lightning-layout-item>
+  </lightning-layout>
+  <template if:true={editEvent}>
+    <c-batch-group-management-modal-cmp
+      record-id={recordId}
+      object-name={objectName}
+      onclosed={editCloseHandler}
+      onrefresh={refreshView}
+      >
+    </c-batch-group-management-modal-cmp>
+  </template>
+</template>

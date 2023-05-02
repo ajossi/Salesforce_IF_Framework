@@ -1,0 +1,154 @@
+[
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGhEAM"
+    },
+    "Name": "SAP",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGjEAM"
+    },
+    "Name": "TEST2",
+    "Description__c": "Test용 레코드"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGkEAM"
+    },
+    "Name": "IF_TEST",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGlEAM"
+    },
+    "Name": "CRETOP",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGmEAM"
+    },
+    "Name": "GW",
+    "Description__c": "그룹웨어"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGnEAM"
+    },
+    "Name": "MDM",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGoEAM"
+    },
+    "Name": "HR",
+    "Description__c": "통합 인사 정보"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGpEAM"
+    },
+    "Name": "TRADLINX",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGqEAM"
+    },
+    "Name": "TRAILHEAD",
+    "Description__c": "TrailHead Rest Callout Legacy"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGrEAM"
+    },
+    "Name": "HEROKU",
+    "Description__c": "Testing for Heroku"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGsEAM"
+    },
+    "Name": "TMS",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGtEAM"
+    },
+    "Name": "DWRS",
+    "Description__c": "DWRS"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGuEAM"
+    },
+    "Name": "BI",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000051TGiEAM"
+    },
+    "Name": "TEST",
+    "Description__c": "Test용 레코드"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000052C3SEAU"
+    },
+    "Name": "TABLEAU",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000052KxIEAU"
+    },
+    "Name": "DSWORK",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w000009USGhEAO"
+    },
+    "Name": "SCG",
+    "Description__c": "연동서버(중계서버)"
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000052CAFEA2"
+    },
+    "Name": "WEBEX",
+    "Description__c": null
+  },
+  {
+    "attributes": {
+      "type": "LegacySystem__c",
+      "url": "/services/data/v56.0/sobjects/LegacySystem__c/a0W0w0000052JpNEAU"
+    },
+    "Name": "DRM",
+    "Description__c": null
+  }
+]
