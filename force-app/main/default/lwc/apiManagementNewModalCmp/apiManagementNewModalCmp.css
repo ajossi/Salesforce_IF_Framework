@@ -1,0 +1,44 @@
+.tab-active {
+    --sds-c-tabs-scoped-color-text-active: var(--lwc-brandAccessibleActive);
+}
+
+.slds-modal{
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.footer-button{
+    margin-right: 3px;
+    float: rigth;
+}
+
+.modal-contents{
+    background-color: white;
+    min-width: 100% !important;
+    min-height: calc(85vh - 15rem)!important;
+    max-height: calc(85vh - 15rem)!important;
+    overflow-y: hidden !important;
+}
+
+.text-area {
+    --sds-c-textarea-sizing-min-height: 200px;
+}
+
+textarea{
+    resize: none;
+}
+
+.slds-tabs_default__content.slds-show{
+    padding:0px !important;
+}
+
+.div-display-none{
+    display: none;
+}
+
+.lwc-button{
+    margin-top: 10px;
+}
+
+/* 
+    margin: auto;
+    margin-top: 10px; */

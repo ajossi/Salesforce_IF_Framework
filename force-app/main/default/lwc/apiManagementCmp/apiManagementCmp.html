@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : hj.jo@dkbmc.com
+  @group             : 
+  @last modified on  : 04-14-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12">
+            <div class="slds-page-header" style="display: inling-block; margin-bottom: 10px;">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:clone" title="medium size (default)"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <lightning-layout>
+                            <lightning-layout-item size="10">
+                                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="">API Management</h1>
+                            </lightning-layout-item>     
+                            <lightning-layout-item size="2">
+                                <div style="float: right;">
+                                    <lightning-button label="New" title="Non-primary action" onclick={clickNewBtn} class="slds-m-left_x-small"></lightning-button>
+                                </div>
+                            </lightning-layout-item>                       
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item class="layout-item table_area" size="12">
+          <div style="height: 300px;">
+              <lightning-datatable
+                      key-field="id"
+                      data={data}
+                      columns={columns}
+                      onrowselection={getSelectedRecord}>
+                      <template if:false={data}>
+                        No data to display
+                      </template>
+              </lightning-datatable>
+          </div>
+      </lightning-layout-item>
+  </lightning-layout>
+  <template if:true={isClickNewBtn}>
+    <c-api-management-new-modal-cmp
+        onclosed={newModalCloseHander}
+        >
+    </c-api-management-new-modal-cmp>
+  </template>
+</template>
