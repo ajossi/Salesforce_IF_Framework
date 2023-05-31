@@ -1,0 +1,92 @@
+<!--
+  @description       : 
+  @author            : hj.jo@dkbmc.com
+  @group             : 
+  @last modified on  : 05-23-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+        class="slds-modal slds-fade-in-open slds-backdrop">
+        <template if:true={isSpinner}>
+            <div class="spinnerHolder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <div class="slds-modal__container">
+            <div class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                <lightning-button-icon class="slds-m-left_xx-small" icon-name="utility:close" variant="container"
+                    onclick={handleCencel}>
+                </lightning-button-icon>
+            </div>
+            <div class="slds-modal__header">
+                <h2 class="slds-modal__title slds-hyphenate slds-text-heading--medium">{modalType} API Routing</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div>
+                    <div>
+                        <lightning-layout multiple-rows="true">
+                            <lightning-layout-item size="12" class="slds-p-bottom_small">
+                                <h3 records-recordlayoutsection_recordlayoutsection=""
+                                    class="test-id__section-header-container slds-section__title slds-theme--shade"
+                                    style="display: block">
+                                    <span records-recordlayoutsection_recordlayoutsection=""
+                                        class="test-id__section-header-title section-header-title slds-p-horizontal--small">
+                                        API Routing Information
+                                    </span>
+                                </h3>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="Interface Id" data-field="interfaceId__c" required
+                                    value={interfaceid}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="URI" data-field="uri__c"
+                                    value={uri}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="HTTP Method" data-field="httpMethod__c"
+                                    value={httpmethod}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="Service Class" data-field="serviceClass__c"
+                                    value={serviceclass}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="Legacy System" data-field="legacySystem__c"
+                                    value={legacysystem}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="Description" data-field="description__c"
+                                    value={description}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-input type="text" label="Timeout" data-field="timeout__c"
+                                    value={timeout}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <tamplate if:true={loaded}>
+                                    <lightning-combobox label="Direction" value={direction} data-field="Direction__c"
+                                        placeholder="Select Direction" options={directionOptions} required
+                                        onchange={directionHandleChange}></lightning-combobox>
+                                </tamplate>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="around-small">
+                                <lightning-input type="checkbox" label="isActive" data-field="isActive__c"
+                                    checked={isactive}></lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-modal__footer ">
+                <div style="text-align: center;">
+                    <lightning-button variant="Neutral" label="Cencel" title="Cencel" onclick={handleCencel}
+                        class="slds-var-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave}
+                        class="slds-var-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

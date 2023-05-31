@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : hj.jo@dkbmc.com
+  @group             : 
+  @last modified on  : 05-23-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item class="layout-item table_area" size="12">
+            <template if:true={isSpinner}>
+                <div class="spinnerHolder">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+            <div class="slds-page-header" style="border-bottom-right-radius: 0%; border-bottom-left-radius: 0%;">
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <div>
+                            <tamplate if:true={loaded}>
+                                <lightning-combobox name="apiRouting" label="API Routing" placeholder="Choose API Routing" value={value}
+                                    onchange={handleChange} options={apiRoutingOptions}>
+                                </lightning-combobox>
+                            </tamplate>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <div class="" style="width: 100%;">
+                <lightning-datatable key-field="Id" data={data} columns={columns}
+                    enable-infinite-loading sorted-direction={sortedDirection} sorted-by={sortedBy} onsort={handleSort}>
+                </lightning-datatable>
+                <template if:true={isDataEmpty}>
+                    <div style="margin: 20px" class="slds-text-align_center"><p>No data to display</p></div>
+                </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

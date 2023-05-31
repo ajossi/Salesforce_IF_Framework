@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : hj.jo@dkbmc.com
+  @group             : 
+  @last modified on  : 05-24-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12">
+            <div class="slds-page-header" style="margin-bottom: 10px;">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:clone" title="medium size (default)"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <lightning-layout>
+                            <lightning-layout-item size="10">
+                                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="">API Management</h1>
+                            </lightning-layout-item>     
+                            <lightning-layout-item size="2">
+                            </lightning-layout-item>                       
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item class="layout-item table_area" size="12">
+            <lightning-tabset variant="scoped">
+                <lightning-tab label="API Routing">
+                    <c-a-p-i_-routing-table-cmp>
+                    </c-a-p-i_-routing-table-cmp>
+                </lightning-tab>
+                <lightning-tab label="Log">
+                    <c-a-p-i_-log-management-cmp>
+                    </c-a-p-i_-log-management-cmp>
+                </lightning-tab>
+                <lightning-tab label="Callout Test">
+                    <c-a-p-i_-callout-test-cmp>
+                    </c-a-p-i_-callout-test-cmp>
+                </lightning-tab>
+            </lightning-tabset>
+      </lightning-layout-item>
+  </lightning-layout>
+</template>

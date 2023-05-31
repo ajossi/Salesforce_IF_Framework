@@ -1,0 +1,16 @@
+<template>
+    <lightning-modal-header label="Retrieve Modal"></lightning-modal-header>
+    <lightning-modal-body>
+        <div class="modal_body">
+            <template if:true={isShowSpinner}>
+                <lightning-spinner alternative-text="Retrieving..."></lightning-spinner>
+            </template>
+            <template if:false={isShowSpinner}>
+               The inquiry has been completed.
+            </template>
+        </div>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="Close" onclick={handleClose}></lightning-button>
+    </lightning-modal-footer>
+</template>

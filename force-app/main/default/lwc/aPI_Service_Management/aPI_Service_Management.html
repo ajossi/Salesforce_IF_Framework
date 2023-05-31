@@ -1,0 +1,14 @@
+<!--
+  @description       : 
+  @last modified on  : 05-11-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <lightning-card title="Object 목록">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <div class="slds-m-around_medium">
+            <lightning-datatable key-field="Id" data={objectList} columns={columns} onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+.modal_body {
+    min-height: 125px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.slds-spinner_container {
+    position: static;
+}

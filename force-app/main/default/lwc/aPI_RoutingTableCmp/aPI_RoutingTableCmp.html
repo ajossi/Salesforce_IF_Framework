@@ -1,0 +1,52 @@
+<!--
+  @description       : 
+  @author            : hj.jo@dkbmc.com
+  @group             : 
+  @last modified on  : 05-24-2023
+  @last modified by  : hj.jo@dkbmc.com
+-->
+<template>
+    <div class="slds-page-header" style="border-bottom-right-radius: 0%; border-bottom-left-radius: 0%;">
+        <lightning-layout>
+            <lightning-layout-item size="10">
+            </lightning-layout-item>     
+            <lightning-layout-item size="2">
+                <div style="float: right;">
+                    <lightning-button label="New" title="New" onclick={handleNewBtn} class="slds-var-m-left_x-small"></lightning-button>
+                    <lightning-button label="Edit" title="Edit" onclick={handleEditBtn} class="slds-var-m-left_x-small"></lightning-button>
+                    <!-- <lightning-button label="Delete" title="Delete" onclick={handleDeleteBtn} class="slds-var-m-left_x-small"></lightning-button> -->
+                </div>
+            </lightning-layout-item>                       
+        </lightning-layout>
+    </div>
+    <div class="" style="width: 100%;">
+        <template if:true={isSpinner}>
+            <div class="spinnerHolder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <lightning-datatable
+                key-field="Id"
+                data={data}
+                columns={columns}
+                onrowselection={handleRowAction}
+                enable-infinite-loading
+                sorted-direction={sortedDirection}
+                sorted-by={sortedBy}
+                onsort={handleSort}
+                >
+        </lightning-datatable>
+        <template if:true={isDataEmpty}>
+            <div style="margin: 20px" class="slds-text-align_center"><p>No data to display</p></div>
+        </template>
+    </div>
+    <template if:true={isNewModalOpen}>
+        <c-api-management-new-modal-cmp
+            record-id={recordId}
+            modal-type={modalType}
+            onclosed={newModalCloseHander}
+            onrefresh={refreshView}
+            >
+        </c-api-management-new-modal-cmp>
+      </template>
+</template>
