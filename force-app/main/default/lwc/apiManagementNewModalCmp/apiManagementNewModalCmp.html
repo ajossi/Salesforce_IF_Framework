@@ -2,7 +2,7 @@
   @description       : 
   @author            : hj.jo@dkbmc.com
   @group             : 
-  @last modified on  : 05-23-2023
+  @last modified on  : 06-01-2023
   @last modified by  : hj.jo@dkbmc.com
 -->
 <template>
@@ -70,6 +70,14 @@
                                         placeholder="Select Direction" options={directionOptions} required
                                         onchange={directionHandleChange}></lightning-combobox>
                                 </tamplate>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-textarea label="Example Param" data-field="ExampleParam__c"
+                                    value={exampleParam}></lightning-textarea>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="horizontal-small" class="slds-var-p-bottom_small">
+                                <lightning-textarea label="Mapping Definition" data-field="mappingDefinition__c"
+                                    value={mappingDefinition}></lightning-textarea>
                             </lightning-layout-item>
                             <lightning-layout-item size="6" padding="around-small">
                                 <lightning-input type="checkbox" label="isActive" data-field="isActive__c"

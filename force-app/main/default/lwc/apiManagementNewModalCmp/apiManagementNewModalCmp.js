@@ -21,6 +21,8 @@ export default class ApiManagementNewModalCmp extends LightningElement {
     @track timeout;
     @track isactive = false;
     @track direction = '';
+    @track exampleParam = '';
+    @track mappingDefinition = '';
 
     //combobox
     @track directionOptions = [];
@@ -68,6 +70,8 @@ export default class ApiManagementNewModalCmp extends LightningElement {
                     this.timeout = result[0].timeout__c;
                     this.isactive = result[0].isActive__c;
                     this.direction = result[0].Direction__c;
+                    this.exampleParam = result[0].ExampleParam__c
+                    this.mappingDefinition = result[0].mappingDefinition__c
                 })
                 .catch(error => {
                     showToast(this, 'Error', 'get Api Record Error', error.message);
@@ -97,12 +101,9 @@ export default class ApiManagementNewModalCmp extends LightningElement {
         try {
             this.isSpinner = true;
 
-            const inputElements = this
-                .template
-                .querySelectorAll('lightning-input');
-            const comboboxElements = this
-                .template
-                .querySelectorAll('lightning-combobox');
+            const inputElements = [...this.template.querySelectorAll('lightning-input')
+                                    , ...this.template.querySelectorAll('lightning-combobox')
+                                    , ...this.template.querySelectorAll('lightning-textarea')];
             const inputValues = {};
 
             inputElements.forEach((input) => {
@@ -123,20 +124,6 @@ export default class ApiManagementNewModalCmp extends LightningElement {
                 } else {
                     inputValues[field] = value;
                 }
-            });
-
-            comboboxElements.forEach((input) => {
-                const field = input.dataset.field;
-                const value = input.value;
-                var blank_pattern = /^\s+|\s+$/g;
-
-                console.log('field : ' + field);
-                console.log('value : ' + value);
-
-                if (value.replace(blank_pattern, '')) 
-                    inputValues[field] = value;
-                
-                console.log('inputValues : ' + inputValues[field]);
             });
 
             console.log(inputValues);
