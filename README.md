@@ -109,7 +109,7 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
 
 ## API Manager ERD
 
-![API Manager ERD](./images/api-erd.png)
+![API Manager ERD](./images/api-mamager-erd.png)
 
 ## Inbound API Service
 
