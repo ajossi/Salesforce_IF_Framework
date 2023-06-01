@@ -196,11 +196,13 @@ public without sharing class API_TEST02_Sender extends API_Service{
     public override httpResponse execute(API_Request request){
         httpResponse result = new httpResponse();
         try{
-            System.debug('request.requestBody : ' + request.requestBody);
 
+            /* Request Body 가공 및 처리 영역 */
+
+            //Request Body를 전달
             result = callout(request);
 
-            System.debug('result.getBody() : ' + result.getBody());
+            /* Response Body 가공 및 처리 영역 */
 
         }catch(Exception e){
             // An error occured
@@ -214,4 +216,4 @@ public without sharing class API_TEST02_Sender extends API_Service{
 ```
 
 서비스 개발 예시 코드는 어디까지나 예시입니다. 각 서비스의 파라미터는 근 틀만 구성하였기 때문에
-위 예시 코드를 따를 필요는 없습니다.`
+위 예시 코드를 따를 필요는 없습니다.
