@@ -77,7 +77,7 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
         <tr>
             <td></td>
             <td>ServiceClass__c</td>
-            <td>Service Class Name</td>
+            <td>API Service Class Name</td>
         </tr>
         <tr>
             <td></td>
