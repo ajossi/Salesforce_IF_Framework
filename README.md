@@ -38,6 +38,8 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
 3. Nebula Logger를 활용하여 Log를 API Management에서 서비스 별로 확인 가능.
 4. Callout Test Tab을 통해 쉽게 API 테스트 가능.
 
+## API_Routing__mdt
+
 <table>
     <thead>
         <tr>
@@ -104,3 +106,109 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
         </tr>
     </tbody>
 </table>
+
+## Inbound API Service
+
+*서비스 개발 예시 코드
+```java
+/*
+Body 예시
+[
+    {
+        "NAME" : "TEST"
+        ,"MDMCODE" : "TEST"
+        ,"PHONE" : "01012345678"
+    }
+]
+*/
+public with sharing class API_TEST01_Receiver extends API_Service{
+    public API_TEST01_Receiver() {}
+    
+    //수신, 송신 여부에 따라 해당하는 메소드 오버라이드 하여 개발.
+    public override RestResponse execute(RestRequest request, RestResponse response){
+        RestResponse result = response;
+
+        try{
+            //Request Body를 매핑 클래스 형태에 맞게 변환.
+            List<mapperClass> mapperList = (List<mapperClass>)JSON.deserialize(request.requestBody.toString(), List<mapperClass>.class);
+            //데이터를 적재할 Object List
+            List<Account> objList = new List<Account>();
+
+            //데이터 매핑 작업
+            for(mapperClass ifObj : mapperList){
+                objList.add(ifObj.convert());
+            }
+
+            //데이터 DML 처리
+            Insert objList;
+
+            //전달할 Response 정보
+            result.responseBody = Blob.valueOf(JSON.serialize(new API_Response(objList)));
+        }catch(Exception e){
+            API_Response errorResponse = new API_Response();
+            errorResponse.createUnhandledExcepionResponse(e.getMessage());
+            System.debug(e.getStackTraceString());
+            
+            // An error occured
+            result.statusCode = 500;
+            result.responseBody = Blob.valueOf(JSON.serialize(errorResponse));
+        }
+
+        return result;
+    }
+
+    //매핑 클래스
+    public class mapperClass {
+        public String NAME      {get;set;}
+        public String MDMCODE   {get;set;}
+        public String PHONE     {get;set;}
+
+        public Account convert(){
+            Account obj = new Account();
+
+            obj.Name = this.NAME;
+            obj.AccountNumber = this.MDMCODE;
+            obj.Phone = this.PHONE;
+
+            return obj;
+        }
+    }
+}
+```
+
+## Outbound API Service
+
+*서비스 개발 예시 코드
+```java
+/*
+
+송신, 조회 서비스의 경우 Request Body는 내부CRM 담당자와 협의하여 결정한다.
+
+Request Body 예시
+
+{"name":"'value'"}
+
+클래스 선언 규칙은 API_(InterfaceID)_ + 송신은 Sender / 수신은 Receiver / 조회는 Search로 한다.
+
+*/
+public without sharing class API_TEST02_Sender extends API_Service{
+    //수신, 송신 여부에 따라 해당하는 메소드 오버라이드 하여 개발.
+    public override httpResponse execute(API_Request request){
+        httpResponse result = new httpResponse();
+        try{
+            System.debug('request.requestBody : ' + request.requestBody);
+
+            result = callout(request);
+
+            System.debug('result.getBody() : ' + result.getBody());
+
+        }catch(Exception e){
+            // An error occured
+            result.setStatusCode(500);
+            result.setStatus(e.getStackTraceString());
+        }
+
+        return result;
+    }
+}
+```
