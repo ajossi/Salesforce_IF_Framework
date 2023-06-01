@@ -21,11 +21,13 @@ public without sharing class API_TEST02_Sender extends API_Service{
     public override httpResponse execute(API_Request request){
         httpResponse result = new httpResponse();
         try{
-            System.debug('request.requestBody : ' + request.requestBody);
 
+            /* Request Body 가공 및 처리 영역 */
+
+            //Request Body를 전달
             result = callout(request);
 
-            System.debug('result.getBody() : ' + result.getBody());
+            /* Response Body 가공 및 처리 영역 */
 
         }catch(Exception e){
             // An error occured
