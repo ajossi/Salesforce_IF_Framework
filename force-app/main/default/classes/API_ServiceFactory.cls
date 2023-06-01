@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-10-2023
+ * @last modified on  : 06-01-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_ServiceFactory {
@@ -15,7 +15,7 @@ public without sharing class API_ServiceFactory {
                                     , ServiceClass__c
                                     , HttpMethod__c
                                     , interfaceId__c
-                                    , timeout__c
+                                    , Timeout__c
                                FROM API_Routing__mdt 
                                WHERE isActive__c = true]; 
             } 
@@ -50,7 +50,7 @@ public without sharing class API_ServiceFactory {
                 result.interfaceId = route.interfaceId__c;
                 result.requestBody = request.requestBody;
 
-                if(route.timeout__c != null) result.timeout = Integer.valueOf(route.timeout__c);
+                if(route.Timeout__c != null) result.timeout = Integer.valueOf(route.Timeout__c);
 
                 return result;
             }

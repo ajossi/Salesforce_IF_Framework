@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-31-2023
+ * @last modified on  : 06-01-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 @IsTest
@@ -22,7 +22,7 @@ public class API_ManagementController_Test {
                                         , ServiceClass__c
                                         , ExampleParam__c
                                         , isActive__c
-                                        , timeout__c
+                                        , Timeout__c
                                     FROM API_Routing__mdt
                                     ORDER BY InterfaceId__c
                                     LIMIT 1
@@ -45,7 +45,7 @@ public class API_ManagementController_Test {
         Map<String, Object> apiRecordsMap = new Map<String, Object>();
         apiRecordsMap.put('interfaceId__c', apiRouting.interfaceId__c);
         apiRecordsMap.put('isActive__c', apiRouting.isActive__c);
-        apiRecordsMap.put('timeout', apiRouting.timeout__c);
+        apiRecordsMap.put('timeout', apiRouting.Timeout__c);
         apiRecordsMap.put('ServiceClass__c', apiRouting.ServiceClass__c);
         
         API_ManagementController.insertUpdateApiRecord(apiRecordsMap);

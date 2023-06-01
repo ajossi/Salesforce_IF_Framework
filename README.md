@@ -91,7 +91,7 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
         </tr>
         <tr>
             <td></td>
-            <td>timeout__c</td>
+            <td>Timeout__c</td>
             <td>Read timeout 설정 값</td>
         </tr>
         <tr>
@@ -101,7 +101,7 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
         </tr>
         <tr>
             <td></td>
-            <td>mappingDefinition__c</td>
+            <td>MappingDefinition__c</td>
             <td>Record 매핑 정보</td>
         </tr>
     </tbody>

@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-31-2023
+ * @last modified on  : 06-01-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 @IsTest
@@ -21,7 +21,7 @@ public class API_Service_Test {
                                         , ServiceClass__c
                                         , ExampleParam__c
                                         , isActive__c
-                                        , timeout__c
+                                        , Timeout__c
                                     FROM API_Routing__mdt
                                     ORDER BY InterfaceId__c
                                     LIMIT 1

@@ -67,11 +67,11 @@ export default class ApiManagementNewModalCmp extends LightningElement {
                     this.serviceclass = result[0].ServiceClass__c;
                     this.legacysystem = result[0].LegacySystem__c;
                     this.description = result[0].Description__c;
-                    this.timeout = result[0].timeout__c;
+                    this.timeout = result[0].Timeout__c;
                     this.isactive = result[0].isActive__c;
                     this.direction = result[0].Direction__c;
                     this.exampleParam = result[0].ExampleParam__c
-                    this.mappingDefinition = result[0].mappingDefinition__c
+                    this.mappingDefinition = result[0].MappingDefinition__c
                 })
                 .catch(error => {
                     showToast(this, 'Error', 'get Api Record Error', error.message);
