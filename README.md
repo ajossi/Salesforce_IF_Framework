@@ -229,5 +229,11 @@ public without sharing class API_TEST02_Sender extends API_Service{
 }
 ```
 
+*Outbound API Service 테스트 가이드
+![Postman get access token](./images/callout-test-guid.png)
+1. API Routing 선택
+2. Param 영역에 Request Body값 입력
+3. submit 버튼 클릭 및 결과 확인
+
 서비스 개발 예시 코드는 어디까지나 예시입니다. 각 서비스의 파라미터는 근 틀만 구성하였기 때문에
 위 예시 코드를 따를 필요는 없습니다.
