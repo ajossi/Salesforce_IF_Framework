@@ -182,7 +182,8 @@ public with sharing class API_TEST01_Receiver extends API_Service{
 
 ## Outbound API Service
 
-*서비스 개발 예시 코드(참조 링크 : https://trailhead.salesforce.com/ko/content/learn/modules/apex_integration_services/apex_integration_rest_callouts)
+*서비스 개발 예시 코드
+(참조 링크 : https://trailhead.salesforce.com/ko/content/learn/modules/apex_integration_services/apex_integration_rest_callouts)
 
 위 링크의 makePostCallout 메소드 부분과 같은 서비스.
 
