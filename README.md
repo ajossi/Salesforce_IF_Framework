@@ -180,6 +180,12 @@ public with sharing class API_TEST01_Receiver extends API_Service{
 }
 ```
 
+*Inbound API Service 테스트 가이드
+![Postman get access token](./images/postman-get-access-token.png)
+![Postman rest callout](./images/postman-rest-callout.png)
+1. https://test.salesforce.com/services/oauth2/token에 POST로 위 이미지의 데이터를 Header 또는 Body에 담아 호출 시 Access Token 수집 가능.
+2. 전달받은 Access Token을 Header에 담고, 호출하려는 서비스의 파라미터 형태에 맞게 Body에 담아 호출하여 테스트 결과 확인.
+
 ## Outbound API Service
 
 *서비스 개발 예시 코드
