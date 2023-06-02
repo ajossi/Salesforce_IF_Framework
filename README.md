@@ -23,22 +23,22 @@ API Framework for Salesforce
 
 Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개발 속도 향상 및 비용을 낮추기 위해 개발되었습니다.
 
-### Package Install URL - 1.1 
+## Package Install URL - 1.1 
 : https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w0000093nfv
 
-### 주의
+## 주의
 
 - Nebula Logger Package를 사용하기 때문에, 먼저 등록 후 진행해주셔야 합니다.
 - Nebula Logger Git URL : https://github.com/jongpie/NebulaLogger
 
-### 특징
+## 특징
 
 1. API Gateway Class를 Inbound, Outbound를 나누고, 서비스 개발 영역도 구분, 파라미터를 구분하여 여러 환경에 대응 가능한 활용성 증대 추구.
 2. API Service 정보를 Custom Metadata(API_Routing__mdt)로 관리, API Management를 통해 코드 수정 없이 경로, 사용여부 등 변경 가능하게 하여 개발 및 운영의 용이성 up.
 3. Nebula Logger를 활용하여 Log를 API Management에서 서비스 별로 확인 가능.
 4. Callout Test Tab을 통해 쉽게 API 테스트 가능.
 
-### API_Routing__mdt
+## API_Routing__mdt
 
 <table>
     <thead>
@@ -107,13 +107,13 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
     </tbody>
 </table>
 
-### API Manager ERD
+## API Manager ERD
 
 ![API Manager ERD](./images/api-manager-erd.png)
 
-### Inbound API Service
+## Inbound API Service
 
-## 서비스 개발 예시 코드
+#### 서비스 개발 예시 코드
 ```java
 /*
 Body 예시
@@ -180,15 +180,15 @@ public with sharing class API_TEST01_Receiver extends API_Service{
 }
 ```
 
-## Inbound API Service 테스트 가이드
+#### Inbound API Service 테스트 가이드
 ![Postman get access token](./images/postman-get-access-token.png)
 ![Postman rest callout](./images/postman-rest-callout.png)
 1. https://test.salesforce.com/services/oauth2/token에 POST로 위 이미지의 데이터를 Header 또는 Body에 담아 호출 시 Access Token 수집 가능.
 2. 전달받은 Access Token을 Header에 담고, 호출하려는 서비스의 파라미터 형태에 맞게 Body에 담아 호출하여 테스트 결과 확인.
 
-### Outbound API Service
+## Outbound API Service
 
-## 서비스 개발 예시 코드
+#### 서비스 개발 예시 코드
 (참조 링크 : https://trailhead.salesforce.com/ko/content/learn/modules/apex_integration_services/apex_integration_rest_callouts)
 
 위 링크의 makePostCallout 메소드 부분과 같은 서비스.
@@ -229,7 +229,7 @@ public without sharing class API_TEST02_Sender extends API_Service{
 }
 ```
 
-## Outbound API Service 테스트 가이드
+#### Outbound API Service 테스트 가이드
 ![Postman get access token](./images/callout-test-guid.png)
 1. API Routing 선택
 2. Param 영역에 Request Body값 입력
