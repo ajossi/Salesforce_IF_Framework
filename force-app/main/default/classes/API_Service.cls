@@ -2,17 +2,16 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-31-2023
+ * @last modified on  : 06-13-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public abstract without sharing class API_Service {
+    public API_Routing__mdt routing = new API_Routing__mdt();
     //수신용
-    // RestResponse execute(RestRequest request, RestResponse response);
     public virtual RestResponse execute(RestRequest request, RestResponse response){
         return new RestResponse();
     }
     //호출용
-    // httpResponse execute(API_Request request);
     public virtual httpResponse execute(API_Request request){
         return new httpResponse();
     }
@@ -27,7 +26,6 @@ public abstract without sharing class API_Service {
             
             calloutRequest.setMethod(request.httpMethod);
             calloutRequest.setTimeout(request.timeout);
-            // if(!request.httpMethod.equals('GET')) calloutRequest.setBody(JSON.serializePretty(request.requestBody));
             if(!request.httpMethod.equals('GET')) calloutRequest.setBody((String)request.requestBody);
             System.debug(calloutRequest.getBody());
 

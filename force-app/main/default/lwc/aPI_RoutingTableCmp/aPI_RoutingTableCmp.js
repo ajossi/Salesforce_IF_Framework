@@ -2,11 +2,20 @@ import { LightningElement, wire, track, api } from 'lwc';
 import getApiRecords from '@salesforce/apex/API_ManagementController.getApiRecords';
 import { showToast } from 'c/commonUtils';
 import { refreshApex } from '@salesforce/apex';
+import getBaseUrl from '@salesforce/apex/API_ManagementController.getBaseUrl';
 
 
 //데이터 테이블 라벨, 데이터 매핑용
 const columns = [
-    { label: 'Id', fieldName: 'Id', editable: false, hideDefaultActions: true}
+    { label: 'Id', fieldName: 'recordUrl', type:'url', typeAttributes: {
+        placeholder: 'Select Route Group',
+        object: "API_Routing__mdt",
+        label: {fieldName: "Id"},
+        filters: "",
+        target: '_blank',
+        valueId: { fieldName: 'Id' } // binding Parent Id of current item in row to autopopulate value on load.
+    }, editable: false }
+    // ,{ label: 'Id', fieldName: 'Id', editable: false, hideDefaultActions: true}
     ,{ label: 'Class Name', fieldName: 'ServiceClass__c', sortable: true, editable: false }
     ,{ label: 'Interface ID', fieldName: 'InterfaceID__c', sortable: true, editable: false }
     ,{ label: 'Description', fieldName: 'Description__c', editable: false }
@@ -24,6 +33,7 @@ export default class API_RoutingTableCmp extends LightningElement {
     isNewModalOpen = false;
     editOpen = false;
     isSpinner = false;
+    baseUrl = '';
 
     //Data Table
     sortedDirection = 'asc';
@@ -39,6 +49,7 @@ export default class API_RoutingTableCmp extends LightningElement {
     modalType = '';
 
     connectedCallback() {
+        this.getBaseUrl();
         this.getApiRecords();
     }
 
@@ -47,12 +58,27 @@ export default class API_RoutingTableCmp extends LightningElement {
         location.reload();
     }
 
+    getBaseUrl(){
+        getBaseUrl()
+                .then(result => {
+                    this.baseUrl = result;
+                    console.log('result : ' + result);
+                    console.log('this.baseUrl : ' + this.baseUrl);
+                })
+                .catch(error => {
+                    console.error('Error:', JSON.stringify(error));
+                })
+    }
+
     getApiRecords() {
         try {
             this.isSpinner = true;
             getApiRecords({recordId : ''})
                 .then(result => {
                     this.data = result;
+                    this.data.forEach(data => {
+                        data.recordUrl = this.baseUrl + '/' + data.Id;
+                    });
                     console.log('result : ' + JSON.stringify(result));
                     console.log('data : ' + JSON.stringify(this.data));
                 })

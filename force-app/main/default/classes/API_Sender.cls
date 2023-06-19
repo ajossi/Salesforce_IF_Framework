@@ -2,7 +2,7 @@
  * @description       : 공통 Callout 클래스
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-31-2023
+ * @last modified on  : 06-18-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_Sender {
@@ -18,7 +18,7 @@ public without sharing class API_Sender {
 
             response = apiService.execute(request);
 
-            Logger.debug('API Outbound Start').addTag(request.serviceClass);
+            Logger.debug('API Outbound Start').addTag(request.interfaceId);
             Logger.debug('REQUEST : ' + JSON.serialize(request));
             Logger.debug('RESPONSE BODY : ' + response.getBody());
             Logger.debug('RESPONSE STATUS CODE : ' + response.getStatusCode());

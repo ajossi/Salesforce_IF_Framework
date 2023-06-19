@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-31-2023
+ * @last modified on  : 06-18-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public with sharing class API_ManagementController {
@@ -139,31 +139,17 @@ public with sharing class API_ManagementController {
 
     @AuraEnabled(cacheable=false)
     public static List<logTableWrapper> getLogRecords(String interfaceId) {
-        Set<String> setClassName = new Set<String>();
         Set<String> setLogId = new Set<String>();
-        List<API_Routing__mdt> apiRoutingList = new List<API_Routing__mdt>();
         List<LogEntryTag__c> logEntryTagList = new List<LogEntryTag__c>();
         List<Log__c> logList = new List<Log__c>();
         List<logTableWrapper> result = new List<logTableWrapper>();
 
         try {
-            apiRoutingList = [SELECT Id
-                                    , serviceClass__c 
-                            FROM API_Routing__mdt
-                            WHERE InterfaceId__c = :interfaceId
-                            ];
-
-            for(API_Routing__mdt mdt : apiRoutingList){
-                setClassName.add(mdt.serviceClass__c);
-            }
-
             logEntryTagList = [SELECT LogEntry__r.Log__c
                                 FROM LogEntryTag__c
-                                WHERE Tag__r.Name IN :setClassName
+                                WHERE Tag__r.Name = :interfaceId
                                 ORDER BY LogEntry__r.Log__r.CreatedDate DESC
             ];
-
-            System.debug('apiRoutingList : ' + apiRoutingList);
             System.debug('logEntryTagList : ' + logEntryTagList);
 
             for(LogEntryTag__c obj : logEntryTagList){
@@ -302,6 +288,11 @@ public with sharing class API_ManagementController {
        // Return Session Id
        return sessionId;
     }
+    
+    @AuraEnabled(cacheable=true)
+    public static String getBaseUrl() {
+        return System.Url.getSalesforceBaseUrl().toExternalForm();
+    }
 
     public class logTableWrapper{
         @AuraEnabled public String id                       {get;set;}
@@ -315,6 +306,30 @@ public with sharing class API_ManagementController {
         @AuraEnabled public Datetime startTime              {get;set;}
 
         public logTableWrapper(Log__c obj){
+            this.Id = obj.Id;
+            this.url = System.Url.getSalesforceBaseUrl().toExternalForm() + '/' + obj.id;
+            this.Name = obj.Name;
+            this.Username = obj.Owner.Name;
+            this.TransactionId = obj.TransactionId__c;
+            this.TotalLogEntries = obj.TotalLogEntries__c;
+            this.TotalERRORLogEntries = obj.TotalERRORLogEntries__c;
+            this.Priority = obj.Priority__c;
+            this.StartTime = obj.StartTime__c;
+        }
+    }
+
+    public class apiRouteWrapper{
+        @AuraEnabled public String id                       {get;set;}
+        @AuraEnabled public String url                       {get;set;}
+        @AuraEnabled public String name                     {get;set;}
+        @AuraEnabled public String username                 {get;set;}
+        @AuraEnabled public String transactionId            {get;set;}
+        @AuraEnabled public Decimal totalLogEntries          {get;set;}
+        @AuraEnabled public Decimal totalERRORLogEntries     {get;set;}
+        @AuraEnabled public String priority                 {get;set;}
+        @AuraEnabled public Datetime startTime              {get;set;}
+
+        public apiRouteWrapper(Log__c obj){
             this.Id = obj.Id;
             this.url = System.Url.getSalesforceBaseUrl().toExternalForm() + '/' + obj.id;
             this.Name = obj.Name;

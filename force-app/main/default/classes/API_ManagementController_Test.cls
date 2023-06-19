@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-01-2023
+ * @last modified on  : 06-18-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 @IsTest
@@ -11,7 +11,7 @@ public class API_ManagementController_Test {
 
     @TestSetup
     static void makeData(){
-        Logger.debug('Test Log').addTag(apiRouting.ServiceClass__c);
+        Logger.debug('Test Log').addTag(apiRouting.InterfaceId__c);
         Logger.saveLog(Logger.SaveMethod.SYNCHRONOUS_DML);
     }
 

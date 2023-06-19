@@ -2,7 +2,7 @@
  * @description       : 수신용 인터페이스 서비스 개발 예시 입니다.
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-01-2023
+ * @last modified on  : 06-13-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 /*
@@ -55,9 +55,14 @@ public with sharing class API_TEST01_Receiver extends API_Service{
 
     //매핑 클래스
     public class mapperClass {
-        public String NAME      {get;set;}
-        public String MDMCODE   {get;set;}
-        public String PHONE     {get;set;}
+        public String NAME              {get;set;}
+        public String MDMCODE           {get;set;}
+        public String PHONE             {get;set;}
+        public String USEYN             {get;set;}
+        public String CREATEDDATETIME   {get;set;}
+        public String CREATEDDATE       {get;set;}
+        public String COLOR             {get;set;}
+        public String CREATEDTIME       {get;set;}
 
         public Account convert(){
             Account obj = new Account();
@@ -65,6 +70,11 @@ public with sharing class API_TEST01_Receiver extends API_Service{
             obj.Name = this.NAME;
             obj.AccountNumber = this.MDMCODE;
             obj.Phone = this.PHONE;
+            obj.isActive__c = Boolean.valueOf(this.USEYN);
+            obj.ifDatetime__c = (DateTime)JSON.deserialize(JSON.serialize(this.CREATEDDATETIME), DateTime.class);
+            obj.ifDate__c = (Date)JSON.deserialize(JSON.serialize(this.CREATEDDATE), Date.class);
+            obj.ifMultiPicklist__c = this.COLOR;
+            obj.ifTime__c = (Time)JSON.deserialize(JSON.serialize(this.CREATEDTIME), Time.class);
 
             return obj;
         }

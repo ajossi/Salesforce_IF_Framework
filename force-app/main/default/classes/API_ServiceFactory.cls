@@ -2,39 +2,46 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-01-2023
+ * @last modified on  : 06-18-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_ServiceFactory {
     
     @testVisible 
-    private static List<API_Routing__mdt> apiRoutings{
-        get{ 
-            if(apiRoutings == NULL){ 
-                apiRoutings = [SELECT URI__c
-                                    , ServiceClass__c
-                                    , HttpMethod__c
-                                    , interfaceId__c
-                                    , Timeout__c
-                               FROM API_Routing__mdt 
-                               WHERE isActive__c = true]; 
-            } 
-            return apiRoutings; 
-		} 
-		set; 
-	} 
+    private static List<API_Routing__mdt> route = new List<API_Routing__mdt>();
+
+    @testVisible
+    private static Map<String, API_Routing__mdt> routeMap{
+        get{
+            Map<String, API_Routing__mdt> tempMap = new Map<String, API_Routing__mdt>();
+
+            route = API_ManagementController.getApiRecords('');
+            System.debug('route : ' + route);
+
+            for(API_Routing__mdt mdt : route){
+                if(mdt.isActive__c)tempMap.put(mdt.HttpMethod__c + mdt.URI__c, mdt);
+
+                System.debug('mdt.HttpMethod__c : ' + mdt.HttpMethod__c);
+                System.debug('mdt.URI__c : ' + mdt.URI__c);
+            }
+            return tempMap;
+        }
+        set;
+    }
     
     // 수신용 서비스 생성 메소드
-    public static API_Service createService(RestRequest request) {          
-        // Check for all active routings if the URL exsists
-        for(API_Routing__mdt route : apiRoutings) {
-            if (route.HttpMethod__c == request.httpMethod &&
-                route.URI__c == request.requestURI) {
-                return (API_Service)Type.forName(route.ServiceClass__c).newInstance();
-            }
-        } 
+    public static API_Routing__mdt createService(RestRequest request) {  
+        API_Routing__mdt result;
 
-        throw new API_Exceptions.API_Exception('No API route found');
+        System.debug('request.httpMethod : ' + request.httpMethod);
+        System.debug('request.requestURI : ' + request.requestURI);
+        if(routeMap.containsKey(request.httpMethod + request.requestURI)){
+            result = routeMap.get(request.httpMethod + request.requestURI);
+        } else {
+            throw new API_Exceptions.API_Exception('No API route found');
+        }
+
+        return result;
     }
 
     // 호출용 서비스 생성 메소드
@@ -42,7 +49,7 @@ public without sharing class API_ServiceFactory {
         API_Request result = new API_Request();        
         // 요청 서비스 유무 확인 및 HttpRequest 값 세팅(Body 제외).
         // 요청 파라미터의 가공은 API_Service에서.
-        for(API_Routing__mdt route : apiRoutings) {
+        for(API_Routing__mdt route : route) {
             if (route.ServiceClass__c == request.serviceClass) {
                 result.serviceClass = route.serviceClass__c;
                 result.httpMethod = route.HttpMethod__c;
