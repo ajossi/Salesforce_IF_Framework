@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 05-19-2023
+ * @last modified on  : 06-19-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_Request {
@@ -12,6 +12,7 @@ public without sharing class API_Request {
     @AuraEnabled public String serviceClass{get;set;}
     @AuraEnabled public Integer timeout = 120000; //기본 값 2분
     @AuraEnabled public Blob cert{get;set;}
+    @AuraEnabled public String mappingDefinition{get;set;}
 
     //body
     @AuraEnabled public Object requestBody{get;set;} //Request Body

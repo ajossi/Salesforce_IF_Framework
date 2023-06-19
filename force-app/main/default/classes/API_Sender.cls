@@ -2,7 +2,7 @@
  * @description       : 공통 Callout 클래스
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-18-2023
+ * @last modified on  : 06-19-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_Sender {
@@ -13,10 +13,19 @@ public without sharing class API_Sender {
         httpResponse response = new httpResponse();
         try{
             if(testCalloutExceptionFlag) throw new CalloutException();
-            if(String.isNotBlank(request.serviceClass)) request = (API_Request) API_ServiceFactory.createService(request);
-            API_Service apiService = (API_Service) Type.forName(request.ServiceClass).newInstance();
 
-            response = apiService.execute(request);
+            request = (API_Request) API_ServiceFactory.createService(request);
+
+            //Service Class exists
+            if(String.isNotBlank(request.serviceClass)){
+                API_Service apiService = (API_Service) Type.forName(request.ServiceClass).newInstance();
+                response = apiService.execute(request);
+            }else{
+                response = new Service().callout(request);
+                List<sObject> objList = new Mapper().jsonToObject(request.mappingDefinition, (Object)response.getBody());
+
+                Insert objList;
+            }
 
             Logger.debug('API Outbound Start').addTag(request.interfaceId);
             Logger.debug('REQUEST : ' + JSON.serialize(request));
@@ -42,4 +51,7 @@ public without sharing class API_Sender {
         
         return response;
     }
+
+    public class Mapper extends API_Mapper{}
+    public class Service extends API_Service{}
 }

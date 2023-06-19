@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-18-2023
+ * @last modified on  : 06-19-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_ServiceFactory {
@@ -56,6 +56,7 @@ public without sharing class API_ServiceFactory {
                 result.uri = route.URI__c;
                 result.interfaceId = route.interfaceId__c;
                 result.requestBody = request.requestBody;
+                result.mappingDefinition = route.MappingDefinition__c;
 
                 if(route.Timeout__c != null) result.timeout = Integer.valueOf(route.Timeout__c);
 
