@@ -23,8 +23,8 @@ API Framework for Salesforce
 
 Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개발 속도 향상 및 비용을 낮추기 위해 개발되었습니다.
 
-## Package Install URL - 1.1 
-: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w0000093nfv
+## Package Install URL - 1.2
+: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w0000093ng0
 
 ## 주의
 

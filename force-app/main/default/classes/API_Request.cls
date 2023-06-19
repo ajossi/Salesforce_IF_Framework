@@ -25,8 +25,8 @@ public without sharing class API_Request {
         this.headers.put('Content-Type', 'application/json;charset=UTF-8');
     }
 
-    public API_Request(String serviceClass, Object requestBody) {
-        this.serviceClass = serviceClass;
+    public API_Request(String interfaceId, Object requestBody) {
+        this.interfaceId = interfaceId;
         this.requestBody = requestBody;
 
         this.headers = new Map<String, String>();

@@ -8,14 +8,12 @@
 public without sharing class API_ServiceFactory {
     
     @testVisible 
-    private static List<API_Routing__mdt> route = new List<API_Routing__mdt>();
+    private static List<API_Routing__mdt> route = API_ManagementController.getApiRecords('');
 
     @testVisible
     private static Map<String, API_Routing__mdt> routeMap{
         get{
             Map<String, API_Routing__mdt> tempMap = new Map<String, API_Routing__mdt>();
-
-            route = API_ManagementController.getApiRecords('');
             System.debug('route : ' + route);
 
             for(API_Routing__mdt mdt : route){
@@ -47,10 +45,13 @@ public without sharing class API_ServiceFactory {
     // 호출용 서비스 생성 메소드
     public static API_Request createService(API_Request request) {  
         API_Request result = new API_Request();        
+        System.debug('route : ' + route);
         // 요청 서비스 유무 확인 및 HttpRequest 값 세팅(Body 제외).
         // 요청 파라미터의 가공은 API_Service에서.
         for(API_Routing__mdt route : route) {
-            if (route.ServiceClass__c == request.serviceClass) {
+            System.debug('route.InterfaceId__c : ' + route.InterfaceId__c);
+            System.debug('request.interfaceId : ' + request.interfaceId);
+            if (route.InterfaceId__c == request.interfaceId) {
                 result.serviceClass = route.serviceClass__c;
                 result.httpMethod = route.HttpMethod__c;
                 result.uri = route.URI__c;

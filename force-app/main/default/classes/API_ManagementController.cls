@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-18-2023
+ * @last modified on  : 06-19-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public with sharing class API_ManagementController {
@@ -306,30 +306,6 @@ public with sharing class API_ManagementController {
         @AuraEnabled public Datetime startTime              {get;set;}
 
         public logTableWrapper(Log__c obj){
-            this.Id = obj.Id;
-            this.url = System.Url.getSalesforceBaseUrl().toExternalForm() + '/' + obj.id;
-            this.Name = obj.Name;
-            this.Username = obj.Owner.Name;
-            this.TransactionId = obj.TransactionId__c;
-            this.TotalLogEntries = obj.TotalLogEntries__c;
-            this.TotalERRORLogEntries = obj.TotalERRORLogEntries__c;
-            this.Priority = obj.Priority__c;
-            this.StartTime = obj.StartTime__c;
-        }
-    }
-
-    public class apiRouteWrapper{
-        @AuraEnabled public String id                       {get;set;}
-        @AuraEnabled public String url                       {get;set;}
-        @AuraEnabled public String name                     {get;set;}
-        @AuraEnabled public String username                 {get;set;}
-        @AuraEnabled public String transactionId            {get;set;}
-        @AuraEnabled public Decimal totalLogEntries          {get;set;}
-        @AuraEnabled public Decimal totalERRORLogEntries     {get;set;}
-        @AuraEnabled public String priority                 {get;set;}
-        @AuraEnabled public Datetime startTime              {get;set;}
-
-        public apiRouteWrapper(Log__c obj){
             this.Id = obj.Id;
             this.url = System.Url.getSalesforceBaseUrl().toExternalForm() + '/' + obj.id;
             this.Name = obj.Name;

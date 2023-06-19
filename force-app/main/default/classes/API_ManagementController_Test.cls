@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-18-2023
+ * @last modified on  : 06-19-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 @IsTest
@@ -103,7 +103,7 @@ public class API_ManagementController_Test {
 
     @IsTest
     public static void testExecuteCode() {
-        String result = API_ManagementController.executeCode(apiRouting.ServiceClass__c, apiRouting.ExampleParam__c);
+        String result = API_ManagementController.executeCode(apiRouting.InterfaceId__c, apiRouting.ExampleParam__c);
     }
 
     @IsTest
