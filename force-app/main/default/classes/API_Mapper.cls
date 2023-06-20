@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-19-2023
+ * @last modified on  : 06-20-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 /*
@@ -24,7 +24,6 @@ public abstract without sharing class API_Mapper {
 
         for(String key : jsonMap.keySet()){
             List<sObject> tempList = new List<sObject>();
-            System.debug('jsonMap.get(key) : ' + jsonMap.get(key));
             tempList = jsonToList(key, jsonMap.get(key));
 
             sObjectList.addAll(tempList);
@@ -43,7 +42,6 @@ public abstract without sharing class API_Mapper {
             //수신받은 List
             for(Object obj : jsonObjectList){
                 Map<String, Object> tempObj = (Map<String, Object>)obj;
-                System.debug('tempObj : ' + tempObj);
 
                 sobject sObj = Schema.getGlobalDescribe().get(sObjectName).newSObject();
                 for (String mappingField : tempObj.keySet()) {

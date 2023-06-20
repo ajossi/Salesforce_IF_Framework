@@ -2,18 +2,23 @@
  * @description       : 수신용 인터페이스 서비스 개발 예시 입니다.
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-13-2023
+ * @last modified on  : 06-20-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 /*
 Body 예시
 
 [
-    {
-        "NAME" : "TEST"
-        ,"MDMCODE" : "TEST"
-        ,"PHONE" : "01012345678"
-    }
+   {
+       "NAME" : "TEST"
+       ,"MDMCODE" : "TEST"
+       ,"PHONE" : "01012345678"
+       ,"USEYN" : "Y"
+       ,"CREATEDDATETIME" : "2023-06-13T11:01:24"
+       ,"CREATEDDATE" : "2023-06-13"
+       ,"COLOR" : "Red;Yellow;Blue"
+       ,"TIME" : "18:30"
+   }
 ]
 
 */

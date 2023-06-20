@@ -104,6 +104,11 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
             <td>MappingDefinition__c</td>
             <td>Record 매핑 정보</td>
         </tr>
+        <tr>
+            <td></td>
+            <td>Headers__c</td>
+            <td>헤더 정보</td>
+        </tr>
     </tbody>
 </table>
 

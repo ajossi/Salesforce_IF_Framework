@@ -8,7 +8,6 @@ export default class API_CalloutTestCmp extends LightningElement {
     @track result = '';
     @track apiRouting = '';
     @track example = '';
-    @track serviceClass = '';
     @track interfaceId = '';
 
     routingMap = [];
@@ -23,13 +22,13 @@ export default class API_CalloutTestCmp extends LightningElement {
                 result.forEach((obj) => {
                     if(obj.Direction__c === 'Outbound'){
                         this.routingOptions.push({
-                            value: obj.ServiceClass__c
+                            value: obj.InterfaceID__c
                             , label: obj.InterfaceID__c});
                     }
                 });
 
                 result.forEach((obj) => {
-                    this.routingMap[obj.ServiceClass__c] = obj.Id;
+                    this.routingMap[obj.InterfaceID__c] = obj.Id;
                 });
             }
             console.log('routingOptions : ' + JSON.stringify(this.routingOptions));
@@ -41,8 +40,8 @@ export default class API_CalloutTestCmp extends LightningElement {
 
     handleRoutingChange(event){
         this.isSpinner = true;
-        this.serviceClass = event.detail.value;
-        this.recordId = this.routingMap[this.serviceClass];
+        this.interfaceId = event.detail.value;
+        this.recordId = this.routingMap[this.interfaceId];
 
         getApiRecords({recordId: this.recordId})
         .then(result=>{
@@ -59,9 +58,9 @@ export default class API_CalloutTestCmp extends LightningElement {
     handleSubmit(){
         try{
             this.isSpinner = true;
-            console.log('this.serviceClass : ' + this.serviceClass);
+            console.log('this.interfaceId : ' + this.interfaceId);
             console.log('this.param : ' + this.param);
-            executeCode({serviceClass: this.serviceClass, requestBody: this.param})
+            executeCode({interfaceId: this.interfaceId, requestBody: this.param})
             .then(result=>{
                 this.result = result;
                 console.log('result : ' + JSON.stringify(this.result));

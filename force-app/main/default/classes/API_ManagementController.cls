@@ -199,13 +199,13 @@ public with sharing class API_ManagementController {
     }
 
     @AuraEnabled(cacheable=false)
-    public static String executeCode(String serviceClass, Object requestBody){
+    public static String executeCode(String interfaceId, Object requestBody){
         String result = '';
         try
         {
             httpResponse response = new httpResponse();
 
-            API_Request request = new API_Request(serviceClass, requestBody);
+            API_Request request = new API_Request(interfaceId, requestBody);
             API_Sender sender = new API_Sender();
             response = sender.handleRequest(request);
 
@@ -213,7 +213,7 @@ public with sharing class API_ManagementController {
         }
         catch (Exception e)
         {
-            throw new AuraHandledException(e.getMessage() + ' / ' + e.getLineNumber());
+            throw new AuraHandledException(e.getMessage() + ' / ' + e.getStackTraceString());
         }
 
         return result;

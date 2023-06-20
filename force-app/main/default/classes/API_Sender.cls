@@ -2,7 +2,7 @@
  * @description       : 공통 Callout 클래스
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-19-2023
+ * @last modified on  : 06-20-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 public without sharing class API_Sender {
