@@ -33,7 +33,7 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
 
 ## 특징
 
-1. API Gateway Class를 Inbound, Outbound를 나누고, 서비스 개발 영역도 구분, 파라미터를 구분하여 여러 환경에 대응 가능한 활용성 증대 추구.
+1. API Gateway를 송, 수신별로 나누고, 서비스 개발 영역도 구분, 파라미터를 구분하여 여러 환경에 대응 가능한 활용성 증대 추구.
 2. API Service 정보를 Custom Metadata(API_Routing__mdt)로 관리, API Management를 통해 코드 수정 없이 경로, 사용여부 등 변경 가능하게 하여 개발 및 운영의 용이성 up.
 3. Nebula Logger를 활용하여 Log를 API Management에서 서비스 별로 확인 가능.
 4. Callout Test Tab을 통해 쉽게 API 테스트 가능.
@@ -282,3 +282,66 @@ public with sharing class API_TEST05_Search extends API_Service{
 
 서비스 개발 예시 코드는 어디까지나 예시입니다. 각 서비스의 파라미터는 근 틀만 구성하였기 때문에
 위 예시 코드를 따를 필요는 없습니다.
+
+## API_Mapper
+
+![API_Mapper ](./images/api_mapper.png)
+
+API_Mapper는 위 그림과 같이 전달받을 JSON 데이터와 매핑정의 정보를 취합하여 List<sObject>로 매핑 및 반환하여 주는 클래스입니다.
+
+추상 클래스이기 때문에 사용 시 상속 클래스를 선언하여 사용해주어야 합니다.
+
+ex) 
+```java
+public class Mapper extends API_Mapper{}
+```
+코드 사용 예 )
+```java 
+List<sObject> objList 
+= new Mapper().jsonToObject([Mapping Definition], [JSON Param]);
+```
+
+[Mapping Definition], [JSON Param]는 모두 Object 타입으로 전달하여야 합니다.
+
+[Mapping Definition] ex)
+{
+    "Account" : {
+        "NAME" : {"value" : "Name", "type" : "String"}
+        , "MDMCODE" : {"value" : "AccountNumber", "type" : "String"}
+        , "PHONE" : {"value" : "phone", "type" : "String"}
+        , "USEYN" : {"value" : "isActive__c", "type" : "Boolean"}
+        ,"CREATEDDATE" : {"value" : "ifDate__c", "type" : "Date"}
+        ,"CREATEDDATETIME" : {"value" : "ifDatetime__c", "type" : "Datetime"}
+        ,"COLOR" : {"value" : "ifMultiPicklist__c", "type" : "Picklist"}
+        ,"TIME" : {"value" : "ifTime__c", "type" : "Time"}
+    }
+    ,"Contact" : {
+        "NAME" : {"value" : "LastName", "type" : "String"}
+    }
+ }
+
+ 기본적으로 매핑 정의 정보는 Object명으로 관리하며 내부 값으로 필드명과 해당 필드와 매핑할 필드 API명, 객체 타입으로 관리합니다.
+
+ [JSON Param] ex)
+ {
+    "Account" : [
+        {
+            "NAME" : "TEST"
+            ,"MDMCODE" : "TEST"
+            ,"PHONE" : "01012345678"
+            ,"USEYN" : "Y"
+            ,"CREATEDDATETIME" : "2023-06-13T11:01:24"
+            ,"CREATEDDATE" : "2023-06-13"
+            ,"COLOR" : "Red;Yellow;Blue"
+            ,"TIME" : "18:30"
+            ,"Contact" : [
+                {
+                    "NAME" : "TEST"
+                }
+            ]
+        }
+    ]
+}
+
+전달 받을 JSON 파라미터는 위에서 정의한 Object명을 Key로 가지고 Value로 배열 정보를 가지는 형태로
+전달 받아야 합니다.
