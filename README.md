@@ -285,7 +285,7 @@ public with sharing class API_TEST05_Search extends API_Service{
 
 ## API_Mapper
 
-![API_Mapper ](./images/api_mapper.png)
+![API_Mapper ](./images/api-mapper.jpg)
 
 API_Mapper는 위 그림과 같이 전달받을 JSON 데이터와 매핑정의 정보를 취합하여 List<sObject>로 매핑 및 반환하여 주는 클래스입니다.
 
