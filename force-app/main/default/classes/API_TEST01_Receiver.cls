@@ -2,19 +2,16 @@
  * @description       : 수신용 인터페이스 서비스 개발 예시 입니다.
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-13-2023
+ * @last modified on  : 06-21-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 /*
-Body 예시
 
-[
-    {
-        "NAME" : "TEST"
-        ,"MDMCODE" : "TEST"
-        ,"PHONE" : "01012345678"
-    }
-]
+InterfaceId : TEST01
+
+송신, 조회 서비스의 경우 Request Body는 내부CRM 담당자와 협의하여 결정한다.
+
+클래스 선언 규칙은 API_(InterfaceID)_ + 송신은 Sender / 수신은 Receiver / 조회는 Search로 한다.
 
 */
 public with sharing class API_TEST01_Receiver extends API_Service{

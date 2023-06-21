@@ -121,14 +121,13 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
 #### 서비스 개발 예시 코드
 ```java
 /*
-Body 예시
-[
-    {
-        "NAME" : "TEST"
-        ,"MDMCODE" : "TEST"
-        ,"PHONE" : "01012345678"
-    }
-]
+
+InterfaceId : TEST01
+
+송신, 조회 서비스의 경우 Request Body는 내부CRM 담당자와 협의하여 결정한다.
+
+클래스 선언 규칙은 API_(InterfaceID)_ + 송신은 Sender / 수신은 Receiver / 조회는 Search로 한다.
+
 */
 public with sharing class API_TEST01_Receiver extends API_Service{
     public API_TEST01_Receiver() {}
