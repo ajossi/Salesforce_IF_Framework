@@ -2,9 +2,18 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-20-2023
+ * @last modified on  : 06-21-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
+/*
+
+InterfaceId : TEST05
+
+송신, 조회 서비스의 경우 Request Body는 내부CRM 담당자와 협의하여 결정한다.
+
+클래스 선언 규칙은 API_(InterfaceID)_ + 송신은 Sender / 수신은 Receiver / 조회는 Search로 한다.
+
+*/
 public with sharing class API_TEST05_Search extends API_Service{
     //수신, 송신 여부에 따라 해당하는 메소드 오버라이드 하여 개발.
     public override httpResponse execute(API_Request request){
