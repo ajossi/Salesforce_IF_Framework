@@ -23,6 +23,7 @@ export default class ApiManagementNewModalCmp extends LightningElement {
     @track direction = '';
     @track exampleParam = '';
     @track mappingDefinition = '';
+    @track headers = '';
 
     //combobox
     @track directionOptions = [];
@@ -72,6 +73,7 @@ export default class ApiManagementNewModalCmp extends LightningElement {
                     this.direction = result[0].Direction__c;
                     this.exampleParam = result[0].ExampleParam__c
                     this.mappingDefinition = result[0].MappingDefinition__c
+                    this.headers = result[0].Headers__c
                 })
                 .catch(error => {
                     showToast(this, 'Error', 'get Api Record Error', error.message);
