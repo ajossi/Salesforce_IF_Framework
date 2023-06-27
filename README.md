@@ -119,6 +119,10 @@ Salesforce의 API의 기반을 잡아 유지보수를 용이하게 하고, 개�
 ## Inbound API Service
 
 #### 서비스 개발 예시 코드
+
+아래는 매핑클래스의 형태에 맞게 고객정보를 전달 받아
+해당 정보를 Account 정보로 매핑 및 저장하는 수신 인터페이스입니다.
+
 ```java
 /*
 
@@ -193,9 +197,10 @@ public with sharing class API_TEST01_Receiver extends API_Service{
 ## Outbound API Service
 
 #### 서비스 개발 예시 코드
-(참조 링크 : https://trailhead.salesforce.com/ko/content/learn/modules/apex_integration_services/apex_integration_rest_callouts)
 
-위 링크의 makePostCallout 메소드 부분과 같은 서비스.
+아래는 다른 세일즈포스 오그의 인터페이스를 호출하는 조회 인터페이스입니다.
+파라미터는 고객코드
+리턴 값은 고객코드에 해당하는 고객정보입니다.
 
 ```java
 /**
