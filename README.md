@@ -304,6 +304,7 @@ List<sObject> objList
 [Mapping Definition], [JSON Param]는 모두 Object 타입으로 전달하여야 합니다.
 
 [Mapping Definition] ex)
+```json
 {
     "Account" : {
         "NAME" : {"value" : "Name", "type" : "String"}
@@ -319,9 +320,9 @@ List<sObject> objList
         "NAME" : {"value" : "LastName", "type" : "String"}
     }
  }
-
+```
  기본적으로 매핑 정의 정보는 Object명으로 관리하며 내부 값으로 필드명과 해당 필드와 매핑할 필드 API명, 객체 타입으로 관리합니다.
-
+```json
  [JSON Param] ex)
  {
     "Account" : [
@@ -342,6 +343,6 @@ List<sObject> objList
         }
     ]
 }
-
+```
 전달 받을 JSON 파라미터는 위에서 정의한 Object명을 Key로 가지고 Value로 배열 정보를 가지는 형태로
 전달 받아야 합니다.
