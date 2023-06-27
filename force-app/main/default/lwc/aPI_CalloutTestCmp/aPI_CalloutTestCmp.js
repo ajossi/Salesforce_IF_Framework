@@ -65,16 +65,18 @@ export default class API_CalloutTestCmp extends LightningElement {
                 this.result = result;
                 console.log('result : ' + JSON.stringify(this.result));
                 showToast(this, 'Success', 'Success Callout', 'Success Callout');
+                this.isSpinner = false;
             }).catch((error)=>{
                 showToast(this, 'error', 'error', JSON.stringify(error));
                 console.error('error:', JSON.stringify(error));
                 console.error('error:'+ error.message);
+                this.isSpinner = false;
             });
-            this.isSpinner = false;
         }catch(err){
             showToast(this, 'error', 'error', err.message);
             console.error('error:', JSON.stringify(err));
             console.error('error:' + err.message);
+            this.isSpinner = false;
         }
     }
 
