@@ -322,8 +322,9 @@ List<sObject> objList
  }
 ```
  기본적으로 매핑 정의 정보는 Object명으로 관리하며 내부 값으로 필드명과 해당 필드와 매핑할 필드 API명, 객체 타입으로 관리합니다.
-```json
+
  [JSON Param] ex)
+ ```json
  {
     "Account" : [
         {
