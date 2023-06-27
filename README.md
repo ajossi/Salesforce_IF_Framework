@@ -347,3 +347,46 @@ List<sObject> objList
 ```
 전달 받을 JSON 파라미터는 위에서 정의한 Object명을 Key로 가지고 Value로 배열 정보를 가지는 형태로
 전달 받아야 합니다.
+
+데이터 타입의 경우 기본적으로는 Salesforce 타입 규칙을 따르며
+별도의 조건이 필요한 경우 재정의하여 사용할 수 있습니다.
+
+ex)
+
+```java
+public with sharing class API_TEST03_Receiver extends API_Service{
+    public API_TEST03_Receiver() {}
+    
+    //수신, 송신 여부에 따라 해당하는 메소드 오버라이드 하여 개발.
+    public override RestResponse execute(RestRequest request, RestResponse response){
+        RestResponse result = response;
+
+        try{
+            List<sObject> objList = new MapperClass().jsonToObject(this.routing.MappingDefinition__c, (Object)request.requestBody.toString());
+            System.debug('objList : ' + objList);
+            //데이터 DML 처리
+            Insert objList;
+
+            //전달할 Response 정보
+            result.responseBody = Blob.valueOf(JSON.serialize(new API_Response(objList)));
+        }catch(Exception e){
+            API_Response errorResponse = new API_Response();
+            errorResponse.createUnhandledExcepionResponse(e.getMessage());
+            System.debug(e.getStackTraceString());
+            
+            // An error occured
+            result.statusCode = 500;
+            result.responseBody = Blob.valueOf(JSON.serialize(errorResponse));
+        }
+
+        return result;
+    }
+    //Boolean에 대한 타입 조건을 Y, F로 재정의
+    public class MapperClass extends API_Mapper{
+        public override Object typeBoolean(Object value){
+            Object result = value.equals('Y') ? true : false;
+            return result;
+        }
+    }
+}
+```

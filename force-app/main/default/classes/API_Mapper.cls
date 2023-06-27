@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : hj.jo@dkbmc.com
  * @group             : 
- * @last modified on  : 06-20-2023
+ * @last modified on  : 06-27-2023
  * @last modified by  : hj.jo@dkbmc.com
 **/
 /*
@@ -162,40 +162,4 @@ public abstract without sharing class API_Mapper {
         }
         return valueTime;
     }
-/*
-    public static Integer getJsonDepth(String jsonString) {
-        return calculateDepth((Map<String, Object>)JSON.deserializeUntyped(jsonString), 0);
-    }	
-    private static Integer calculateDepth(Map<String, Object> jsonMap, Integer currentDepth) {
-        Integer maxDepth = currentDepth;
-    
-        for (Object value : jsonMap.values()) {
-            if (value instanceof Map<String, Object>) {
-                Integer childDepth = calculateDepth((Map<String, Object>)value, currentDepth + 1);
-                maxDepth = Math.max(maxDepth, childDepth);
-            } else if (value instanceof List<Object>) {
-                Integer childDepth = calculateListDepth((List<Object>)value, currentDepth + 1);
-                maxDepth = Math.max(maxDepth, childDepth);
-            }
-        }
-    
-        return maxDepth;
-    }
-    
-    private static Integer calculateListDepth(List<Object> jsonList, Integer currentDepth) {
-        Integer maxDepth = currentDepth;
-    
-        for (Object value : jsonList) {
-            if (value instanceof Map<String, Object>) {
-                Integer childDepth = calculateDepth((Map<String, Object>)value, currentDepth + 1);
-                maxDepth = Math.max(maxDepth, childDepth);
-            } else if (value instanceof List<Object>) {
-                Integer childDepth = calculateListDepth((List<Object>)value, currentDepth + 1);
-                maxDepth = Math.max(maxDepth, childDepth);
-            }
-        }
-    
-        return maxDepth;
-    }
-    */
 }
