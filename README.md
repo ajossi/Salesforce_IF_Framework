@@ -390,3 +390,19 @@ public with sharing class API_TEST03_Receiver extends API_Service{
     }
 }
 ```
+
+## 논 코딩 서비스 개발 가이드
+
+별도의 인증이나 다른 프로세스로 인하여 코딩이 필요 없는 경우
+매핑 정의 정보를 확인하여 별도의 서비스 클래스 없이 인터페이스 처리가 가능합니다.
+
+개발 순서
+
+# 1. ServiceClass가 없는 서비스 레코드를 생성합니다.(API_Routing__mdt)
+![None Service Class Routing](./images/none-service-class-routing.png)
+
+# 2. 서비스 정보 및 매핑정의에 맞게 데이터를 송신합니다.
+![None Service Class Routing Test](./images/none-service-class-routing2.png)
+
+# 3. 데이터가 정상적으로 생성되었는지 확인한다.
+![None Service Class Routing Test Result](./images/none-service-class-routing3.png)
