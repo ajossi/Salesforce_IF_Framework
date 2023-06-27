@@ -249,10 +249,10 @@ public with sharing class API_TEST05_Search extends API_Service{
             API_Request request = new API_Request();
             request.uri = 'https://login.salesforce.com/services/oauth2/token';
             request.requestBody = 'grant_type=password' + 
-                                    '&client_id=' + '3MVG9n_HvETGhr3CKoyvBOQAOKIYzJvWCcvh1B9Cop12v21nET_jijmkKqD0OhEZvrJN5E5UuVkwAUDSXNbbk' + 
-                                    '&client_secret=' + '776C475D43366D98C48C93D21077D8865149B4A0E5611BF35B3A84F07771F888' + 
-                                    '&username=' + 'hj.jo@dkbmc.com.dev' + 
-                                    '&password=' + 'dkbmc123';  
+                                    '&client_id=' + '[client_id]' + 
+                                    '&client_secret=' + '[client_secret]' + 
+                                    '&username=' + '[username]' + 
+                                    '&password=' + '[password]';  
             request.httpMethod = 'POST';
             request.headers.put('Content-Type','application/x-www-form-urlencoded');
 
